@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml:1:1-20:12
-INJECTED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml:1:1-20:12
-INJECTED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml:1:1-20:12
-INJECTED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml:1:1-20:12
+ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:1:1-20:12
+INJECTED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:1:1-20:12
+INJECTED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:1:1-20:12
+INJECTED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:1:1-20:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\remim\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\cf5be5c12a7ee7bc34a557846fe79997\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\remim\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\4c3d22c68da48c041cf5c59f3882be7c\AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\remim\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\183280392082ff3aeb4e8aaaa94fc6d1\AndroidManifest.xml:17:1-28:12
@@ -14,25 +14,25 @@ MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\remim\.grad
 MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\remim\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\cb81d7a32ca3b3fade78151bf1ef2607\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\remim\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\3aa1ae318ee4c48df5406eea4a9c5341\AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\remim\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\3eb4af7cf420a3a7e639e595a4b8ec09\AndroidManifest.xml:17:1-30:12
-INJECTED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml:1:1-20:12
-INJECTED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml:1:1-20:12
-INJECTED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml:1:1-20:12
+INJECTED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:1:1-20:12
+INJECTED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:1:1-20:12
+INJECTED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:1:1-20:12
 	package
-		ADDED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml:2:3-40
-		INJECTED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:2:3-40
+		INJECTED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml:1:1-20:12
-		INJECTED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:1:1-20:12
+		INJECTED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml:1:1-20:12
-		INJECTED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:1:1-20:12
+		INJECTED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml:1:11-69
+		ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:1:11-69
 application
-ADDED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml:4:3-17:19
+ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:4:3-17:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\remim\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\cf5be5c12a7ee7bc34a557846fe79997\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\remim\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\cf5be5c12a7ee7bc34a557846fe79997\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\remim\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\4c3d22c68da48c041cf5c59f3882be7c\AndroidManifest.xml:22:5-26:19
@@ -54,35 +54,35 @@ MERGED from [com.android.support:support-compat:26.1.0] C:\Users\remim\.gradle\c
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\remim\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\3eb4af7cf420a3a7e639e595a4b8ec09\AndroidManifest.xml:24:5-28:19
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\remim\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\3eb4af7cf420a3a7e639e595a4b8ec09\AndroidManifest.xml:24:5-28:19
 	android:supportsRtl
-		ADDED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml:9:5-31
+		ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:9:5-31
 	android:label
-		ADDED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml:7:5-37
+		ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:7:5-37
 	android:roundIcon
-		ADDED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml:8:5-50
+		ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:8:5-50
 	android:icon
-		ADDED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml:6:5-39
+		ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:6:5-39
 	android:allowBackup
-		ADDED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml:5:5-31
+		ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:5:5-31
 	android:theme
-		ADDED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml:10:5-36
+		ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:10:5-36
 activity#com.example.remim.chessremi.MainActivity
-ADDED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml:11:7-16:18
+ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:11:7-16:18
 	android:name
-		ADDED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml:11:17-45
+		ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:11:17-45
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml:12:9-15:25
+ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:12:9-15:25
 action#android.intent.action.MAIN
-ADDED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml:13:11-63
+ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:13:11-63
 	android:name
-		ADDED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml:13:19-60
+		ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:13:19-60
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml:14:11-71
+ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:14:11-71
 	android:name
-		ADDED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml:14:21-68
+		ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:14:21-68
 uses-sdk
-INJECTED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\remim\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\cf5be5c12a7ee7bc34a557846fe79997\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\remim\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\cf5be5c12a7ee7bc34a557846fe79997\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\remim\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\4c3d22c68da48c041cf5c59f3882be7c\AndroidManifest.xml:20:5-44
@@ -103,18 +103,18 @@ MERGED from [com.android.support:support-compat:26.1.0] C:\Users\remim\.gradle\c
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\remim\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\3aa1ae318ee4c48df5406eea4a9c5341\AndroidManifest.xml:21:5-23:58
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\remim\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\3eb4af7cf420a3a7e639e595a4b8ec09\AndroidManifest.xml:20:5-22:41
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\remim\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\3eb4af7cf420a3a7e639e595a4b8ec09\AndroidManifest.xml:20:5-22:41
-INJECTED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\remim\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\cf5be5c12a7ee7bc34a557846fe79997\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		INJECTED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\remim\AndroidStudioProjects\ChessRemi\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml
 meta-data#android.support.VERSION
 ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\remim\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\cf5be5c12a7ee7bc34a557846fe79997\AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\remim\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\4c3d22c68da48c041cf5c59f3882be7c\AndroidManifest.xml:23:9-25:38

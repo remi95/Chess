@@ -22,10 +22,10 @@ public final class R {
         public static final int abc_action_bar_embed_tabs = 0x7f030000;
     }
     public static final class color {
-        public static final int notification_action_color_filter = 0x7f04003e;
-        public static final int notification_icon_bg_color = 0x7f04003f;
-        public static final int ripple_material_light = 0x7f04004a;
-        public static final int secondary_text_default_material_light = 0x7f04004c;
+        public static final int notification_action_color_filter = 0x7f040041;
+        public static final int notification_icon_bg_color = 0x7f040042;
+        public static final int ripple_material_light = 0x7f04004d;
+        public static final int secondary_text_default_material_light = 0x7f04004f;
     }
     public static final class dimen {
         public static final int compat_button_inset_horizontal_material = 0x7f05004a;
@@ -79,16 +79,16 @@ public final class R {
         public static final int italic = 0x7f070039;
         public static final int line1 = 0x7f07003a;
         public static final int line3 = 0x7f07003b;
-        public static final int normal = 0x7f070044;
-        public static final int notification_background = 0x7f070045;
-        public static final int notification_main_column = 0x7f070046;
-        public static final int notification_main_column_container = 0x7f070047;
-        public static final int right_icon = 0x7f07004c;
-        public static final int right_side = 0x7f07004d;
-        public static final int text = 0x7f07006a;
-        public static final int text2 = 0x7f07006b;
-        public static final int time = 0x7f07006e;
-        public static final int title = 0x7f07006f;
+        public static final int normal = 0x7f070045;
+        public static final int notification_background = 0x7f070046;
+        public static final int notification_main_column = 0x7f070047;
+        public static final int notification_main_column_container = 0x7f070048;
+        public static final int right_icon = 0x7f07004d;
+        public static final int right_side = 0x7f07004e;
+        public static final int text = 0x7f07006b;
+        public static final int text2 = 0x7f07006c;
+        public static final int time = 0x7f07006f;
+        public static final int title = 0x7f070070;
     }
     public static final class integer {
         public static final int status_bar_notification_info_maxnum = 0x7f080004;

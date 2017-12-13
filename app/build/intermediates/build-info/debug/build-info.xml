@@ -7,81 +7,92 @@
     format="10"
     ir-eligibility="COMPATIBLE"
     plugin-version="3.0.0"
-    timestamp="1511979127016"
-    token="-2385104044384390606"
+    timestamp="1513180429254"
+    token="465864674651014965"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="122" />
+        duration="144" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="27" />
+        duration="21" />
     <task
         name="verifier"
         duration="4" />
 
     <artifact
-        location="C:\Users\remim\AndroidStudioProjects\ChessRemi\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+        location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\remim\AndroidStudioProjects\ChessRemi\app\build\outputs\apk\debug\app-debug.apk"
+        location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\outputs\apk\debug\app-debug.apk"
         type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1511978852153"
+        timestamp="1513175301682"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\remim\AndroidStudioProjects\ChessRemi\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\remim\AndroidStudioProjects\ChessRemi\app\build\outputs\apk\debug\app-debug.apk"
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\outputs\apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
         <artifact
-            location="C:\Users\remim\AndroidStudioProjects\ChessRemi\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\remim\AndroidStudioProjects\ChessRemi\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\remim\AndroidStudioProjects\ChessRemi\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\remim\AndroidStudioProjects\ChessRemi\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\remim\AndroidStudioProjects\ChessRemi\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\remim\AndroidStudioProjects\ChessRemi\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\remim\AndroidStudioProjects\ChessRemi\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\remim\AndroidStudioProjects\ChessRemi\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\remim\AndroidStudioProjects\ChessRemi\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\remim\AndroidStudioProjects\ChessRemi\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1511979127016"
-        verifier="COLD_SWAP_REQUESTED" >
+        timestamp="1513180386286"
+        verifier="CLASS_ADDED" >
         <artifact
-            location="C:\Users\remim\AndroidStudioProjects\ChessRemi\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\remim\AndroidStudioProjects\ChessRemi\app\build\outputs\apk\debug\app-debug.apk"
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\outputs\apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1513180429254"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\outputs\apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
 
