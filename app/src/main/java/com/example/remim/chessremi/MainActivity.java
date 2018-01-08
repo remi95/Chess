@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -20,6 +21,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends Activity {
 
+  private LinearLayout llContent;
   private TableLayout tlBoard;
   private TableRow trBlack;
   private TableRow trWhite;
@@ -27,9 +29,11 @@ public class MainActivity extends Activity {
   ArrayList<Integer> whiteIcons = new ArrayList<>();
 
   public void initComponents(){
+    llContent = findViewById(R.id.llContent);
     tlBoard = findViewById(R.id.tlBoard);
     trBlack = findViewById(R.id.trBlack);
     trWhite = findViewById(R.id.trWhite);
+
 
     DisplayMetrics metrics = new DisplayMetrics();
     getWindowManager().getDefaultDisplay().getMetrics(metrics);

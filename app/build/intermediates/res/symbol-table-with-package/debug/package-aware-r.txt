@@ -701,9 +701,9 @@ int id title_template 0x7f070072
 int id tlBoard 0x7f070073
 int id top 0x7f070074
 int id topPanel 0x7f070075
-int id toto 0x7f070076
-int id trBlack 0x7f070077
-int id trWhite 0x7f070078
+int id trBlack 0x7f070076
+int id trWhite 0x7f070077
+int id tvBlackPlayer 0x7f070078
 int id uniform 0x7f070079
 int id up 0x7f07007a
 int id useLogo 0x7f07007b

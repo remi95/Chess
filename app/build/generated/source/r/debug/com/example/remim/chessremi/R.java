@@ -2403,9 +2403,9 @@ public final class R {
     public static final int tlBoard=0x7f070073;
     public static final int top=0x7f070074;
     public static final int topPanel=0x7f070075;
-    public static final int toto=0x7f070076;
-    public static final int trBlack=0x7f070077;
-    public static final int trWhite=0x7f070078;
+    public static final int trBlack=0x7f070076;
+    public static final int trWhite=0x7f070077;
+    public static final int tvBlackPlayer=0x7f070078;
     public static final int uniform=0x7f070079;
     public static final int up=0x7f07007a;
     public static final int useLogo=0x7f07007b;

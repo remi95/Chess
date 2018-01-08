@@ -7,22 +7,22 @@
     format="10"
     ir-eligibility="COMPATIBLE"
     plugin-version="3.0.0"
-    timestamp="1513180429254"
+    timestamp="1515408080376"
     token="465864674651014965"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="144" />
+        duration="150" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="21" />
+        duration="30" />
     <task
         name="verifier"
-        duration="4" />
+        duration="3" />
 
     <artifact
         location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
@@ -33,7 +33,7 @@
 
     <build
         build-mode="FULL"
-        timestamp="1513175301682"
+        timestamp="1515406814520"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
@@ -74,11 +74,8 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1513180386286"
-        verifier="CLASS_ADDED" >
-        <artifact
-            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-            type="SPLIT" />
+        timestamp="1515408003977"
+        verifier="FIELD_TYPE_CHANGE" >
         <artifact
             location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\outputs\apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
@@ -86,7 +83,7 @@
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1513180429254"
+        timestamp="1515408080376"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_6.apk"

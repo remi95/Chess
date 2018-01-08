@@ -6,19 +6,26 @@ import java.util.ArrayList;
  * Created by remim on 13/12/2017.
  */
 
-public class Shield {
-  private ArrayList<Coords> moves = new ArrayList<>();
-  private ArrayList<Coords> actions = new ArrayList<>();
-  private int life = 2;
-  private boolean jump = false;
-  private Integer img;
+public class Shield extends Pion {
+
+  private ArrayList<Coords> moves;
+  private ArrayList<Coords> actions;
 
   public Shield(PlayerColor color){
+    setLife(2);
+    setJump(false);
+
     if(color == PlayerColor.White)
-      img = R.drawable.w_bow;
+      setImg(R.drawable.w_shield);
     else
-      img = R.drawable.bow;
-//    initMoves();
-//    initActions();
+      setImg(R.drawable.shield);
+
+    moves = getMoves();
+    initMoves();
+    actions = null;
+  }
+
+  public void initMoves(){
+    moves.add(new Coords(0, 1));
   }
 }

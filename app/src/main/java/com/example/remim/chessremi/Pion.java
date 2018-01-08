@@ -7,14 +7,14 @@ import java.util.ArrayList;
  */
 
 public class Pion {
-  private ArrayList deplacements;
-  private ArrayList actions;
+  private ArrayList<Coords> moves = new ArrayList<>();
+  private ArrayList<Coords> actions = new ArrayList<>();
   private int life;
   private boolean jump;
   private Integer img;
 
   public Pion() {
-    this.deplacements = deplacements;
+    this.moves = moves;
     this.actions = actions;
     this.life = life;
     this.jump = jump;
@@ -28,19 +28,19 @@ public class Pion {
     this.img = img;
   }
 
-  public ArrayList getDeplacements() {
-    return deplacements;
+  public ArrayList<Coords> getMoves() {
+    return moves;
   }
 
-  public void setDeplacements(ArrayList deplacements) {
-    this.deplacements = deplacements;
+  public void setMoves(ArrayList<Coords> moves) {
+    this.moves = moves;
   }
 
-  public ArrayList getActions() {
+  public ArrayList<Coords> getActions() {
     return actions;
   }
 
-  public void setActions(ArrayList actions) {
+  public void setActions(ArrayList<Coords> actions) {
     this.actions = actions;
   }
 

@@ -8,17 +8,21 @@ import java.util.ArrayList;
 
 public class Bow extends Pion {
 
-  private ArrayList<Coords> moves = new ArrayList<>();
-  private ArrayList<Coords> actions = new ArrayList<>();
+  private ArrayList<Coords> moves;
+  private ArrayList<Coords> actions;
 
   public Bow(PlayerColor color){
     setLife(1);
-    setJump(false);
+    setJump(true);
+
     if(color == PlayerColor.White)
       setImg(R.drawable.w_bow);
     else
       setImg(R.drawable.bow);
+
+    moves = getMoves();
     initMoves();
+    actions = getActions();
     initActions();
   }
 
@@ -36,24 +40,11 @@ public class Bow extends Pion {
   public void initActions(){
     actions.add(new Coords(-2, 0));
     actions.add(new Coords(-1, -1));
-    actions.add(new Coords(1, 1));
+    actions.add(new Coords(-1, 1));
     actions.add(new Coords(0, -2));
     actions.add(new Coords(0, 2));
     actions.add(new Coords(1, -1));
     actions.add(new Coords(1, 1));
     actions.add(new Coords(2, 0));
   }
-
-  public ArrayList<Coords> getMoves() {
-    return moves;
-  }
-
-  public void setMoves(ArrayList<Coords> moves) {
-    this.moves = moves;
-  }
-
-  public ArrayList<Coords> getActions() {
-    return actions;
-  }
-
 }
