@@ -32,7 +32,7 @@ INJECTED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidMan
 	xmlns:android
 		ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:1:11-69
 application
-ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:4:3-17:19
+ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:4:3-17:17
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\remim\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\cf5be5c12a7ee7bc34a557846fe79997\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\remim\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\cf5be5c12a7ee7bc34a557846fe79997\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\remim\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\4c3d22c68da48c041cf5c59f3882be7c\AndroidManifest.xml:22:5-26:19
@@ -66,19 +66,19 @@ MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\remim\.gradle\caches
 	android:theme
 		ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:10:5-36
 activity#com.example.remim.chessremi.MainActivity
-ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:11:7-16:18
+ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:11:5-16:16
 	android:name
-		ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:11:17-45
+		ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:11:15-43
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:12:9-15:25
+ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:12:7-15:23
 action#android.intent.action.MAIN
-ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:13:11-63
+ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:13:9-61
 	android:name
-		ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:13:19-60
+		ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:13:17-58
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:14:11-71
+ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:14:9-69
 	android:name
-		ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:14:21-68
+		ADDED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml:14:19-66
 uses-sdk
 INJECTED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\remim\AndroidStudioProjects\Chess\app\src\main\AndroidManifest.xml

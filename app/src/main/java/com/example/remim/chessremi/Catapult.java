@@ -18,7 +18,7 @@ public class Catapult extends Pion {
     if(color == PlayerColor.White)
       setImg(R.drawable.w_catapult);
     else
-      setImg(R.drawable.catapult);
+      setImg(R.drawable.b_catapult);
 
     moves = getMoves();
     initMoves();

@@ -18,7 +18,7 @@ public class Sword extends Pion {
     if(color == PlayerColor.White)
       setImg(R.drawable.w_sword);
     else
-      setImg(R.drawable.sword);
+      setImg(R.drawable.b_sword);
 
     moves = getMoves();
     initMoves();

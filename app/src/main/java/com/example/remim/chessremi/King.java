@@ -18,7 +18,7 @@ public class King extends Pion {
     if(color == PlayerColor.White)
       setImg(R.drawable.w_crown);
     else
-      setImg(R.drawable.crown);
+      setImg(R.drawable.b_crown);
 
     moves = getMoves();
     initMoves();

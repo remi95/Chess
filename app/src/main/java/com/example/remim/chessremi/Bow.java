@@ -18,7 +18,7 @@ public class Bow extends Pion {
     if(color == PlayerColor.White)
       setImg(R.drawable.w_bow);
     else
-      setImg(R.drawable.bow);
+      setImg(R.drawable.b_bow);
 
     moves = getMoves();
     initMoves();

@@ -18,7 +18,7 @@ public class Shield extends Pion {
     if(color == PlayerColor.White)
       setImg(R.drawable.w_shield);
     else
-      setImg(R.drawable.shield);
+      setImg(R.drawable.b_shield);
 
     moves = getMoves();
     initMoves();

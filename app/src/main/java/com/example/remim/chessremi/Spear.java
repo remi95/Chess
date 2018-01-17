@@ -18,7 +18,7 @@ public class Spear extends Pion {
     if(color == PlayerColor.White)
       setImg(R.drawable.w_spear);
     else
-      setImg(R.drawable.spear);
+      setImg(R.drawable.b_spear);
 
     moves = getMoves();
     initMoves();
