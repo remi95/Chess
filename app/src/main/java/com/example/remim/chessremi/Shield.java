@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by remim on 13/12/2017.
  */
 
-public class Shield extends Pion {
+public class Shield extends Piece {
 
   private ArrayList<Coords> moves;
   private ArrayList<Coords> actions;
@@ -14,6 +14,7 @@ public class Shield extends Pion {
   public Shield(PlayerColor color){
     setLife(2);
     setJump(false);
+    setColor(color);
 
     if(color == PlayerColor.White)
       setImg(R.drawable.w_shield);

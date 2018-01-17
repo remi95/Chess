@@ -127,7 +127,6 @@
     android:layout_weight="1">
 
     <RelativeLayout
-      android:id="@+id/rlSquare"
       android:layout_height="0dp"
       android:layout_width="0dp"
       android:layout_columnWeight="1"
@@ -511,9 +510,7 @@
       android:layout_columnWeight="1"
       android:layout_rowWeight="1"
       android:background="@color/brown"/>
-
-
-</GridLayout>
+  </GridLayout>
 
   <TableRow
     android:id="@+id/trWhite"

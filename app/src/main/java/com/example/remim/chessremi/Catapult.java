@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by remim on 08/01/2018.
  */
 
-public class Catapult extends Pion {
+public class Catapult extends Piece {
 
   private ArrayList<Coords> moves;
   private ArrayList<Coords> actions;
@@ -14,6 +14,7 @@ public class Catapult extends Pion {
   public Catapult(PlayerColor color){
     setLife(1);
     setJump(false);
+    setColor(color);
 
     if(color == PlayerColor.White)
       setImg(R.drawable.w_catapult);

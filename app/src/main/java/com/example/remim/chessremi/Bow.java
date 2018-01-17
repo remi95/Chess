@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by remim on 13/12/2017.
  */
 
-public class Bow extends Pion {
+public class Bow extends Piece {
 
   private ArrayList<Coords> moves;
   private ArrayList<Coords> actions;
@@ -14,6 +14,7 @@ public class Bow extends Pion {
   public Bow(PlayerColor color){
     setLife(1);
     setJump(true);
+    setColor(color);
 
     if(color == PlayerColor.White)
       setImg(R.drawable.w_bow);
