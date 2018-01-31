@@ -8,9 +8,6 @@ import java.util.ArrayList;
 
 public class Catapult extends Piece {
 
-  private ArrayList<Coords> moves;
-  private ArrayList<Coords> actions;
-
   public Catapult(PlayerColor color){
     setLife(1);
     setJump(false);

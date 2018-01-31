@@ -8,9 +8,6 @@ import java.util.ArrayList;
 
 public class King extends Piece {
 
-  private ArrayList<Coords> moves;
-  private ArrayList<Coords> actions;
-
   public King(PlayerColor color){
     setLife(1);
     setJump(false);
@@ -42,7 +39,7 @@ public class King extends Piece {
     actions.add(new Coords(-1, 0));
     actions.add(new Coords(1, 0));
     actions.add(new Coords(-1, -1));
-    actions.add(new Coords(-1, 0));
-    actions.add(new Coords(-1, 1));
+    actions.add(new Coords(0, -1));
+    actions.add(new Coords(1, -1));
   }
 }

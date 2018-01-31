@@ -1,16 +1,10 @@
 package com.example.remim.chessremi;
 
 import android.app.Activity;
-import android.content.Context;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -35,7 +29,8 @@ public class MainActivity extends Activity {
   private Bow blackBow_1, blackBow_2, whiteBow_1, whiteBow_2;
   private Spear blackSpear_1, blackSpear_2, whiteSpear_1, whiteSpear_2;
   private Catapult blackCatapult_1, blackCatapult_2, whiteCatapult_1, whiteCatapult_2;
-  private King blackKing_1, blackKing_2, whiteKing_1, whiteKing_2;
+  private King blackKing, whiteKing;
+  private Queen blackQueen, whiteQueen;
   private ArrayList<RelativeLayout> allCases = new ArrayList<>();
   private ArrayList<RelativeLayout> changedCases = new ArrayList<>();
   private RelativeLayout.OnClickListener clickListener;
@@ -58,8 +53,8 @@ public class MainActivity extends Activity {
     blackSpear_2 = new Spear(PlayerColor.Black);
     blackCatapult_1 = new Catapult(PlayerColor.Black);
     blackCatapult_2 = new Catapult(PlayerColor.Black);
-    blackKing_1 = new King(PlayerColor.Black);
-    blackKing_2 = new King(PlayerColor.Black);
+    blackKing = new King(PlayerColor.Black);
+    blackQueen = new Queen(PlayerColor.Black);
 
 //    WHITE PIONS
     whiteShield_1 = new Shield(PlayerColor.White);
@@ -76,8 +71,8 @@ public class MainActivity extends Activity {
     whiteSpear_2 = new Spear(PlayerColor.White);
     whiteCatapult_1 = new Catapult(PlayerColor.White);
     whiteCatapult_2 = new Catapult(PlayerColor.White);
-    whiteKing_1 = new King(PlayerColor.White);
-    whiteKing_2 = new King(PlayerColor.White);
+    whiteKing = new King(PlayerColor.White);
+    whiteQueen = new Queen(PlayerColor.White);
   }
 
   public void posPieces(Piece piece, int xPos, int yPos){
@@ -131,8 +126,8 @@ public class MainActivity extends Activity {
     posPieces(blackCatapult_1, 0, 0);
     posPieces(blackBow_1, 1, 0);
     posPieces(blackSpear_1, 2, 0);
-    posPieces(blackKing_1, 3, 0);
-    posPieces(blackKing_2, 4, 0);
+    posPieces(blackKing, 3, 0);
+    posPieces(blackQueen, 4, 0);
     posPieces(blackSpear_2, 5, 0);
     posPieces(blackBow_2, 6, 0);
     posPieces(blackCatapult_2, 7, 0);
@@ -141,8 +136,8 @@ public class MainActivity extends Activity {
     posPieces(blackSword_2, 2, 1);
     posPieces(blackShield_2, 3, 1);
     posPieces(blackShield_3, 4, 1);
-    posPieces(blackSword_4, 5, 1);
-    posPieces(blackShield_3, 6, 1);
+    posPieces(blackSword_3, 5, 1);
+    posPieces(blackShield_4, 6, 1);
     posPieces(blackSword_4, 7, 1);
 
     posPieces(whiteSword_1, 0, 6);
@@ -156,8 +151,8 @@ public class MainActivity extends Activity {
     posPieces(whiteCatapult_1, 0, 7);
     posPieces(whiteBow_1, 1, 7);
     posPieces(whiteSpear_1, 2, 7);
-    posPieces(whiteKing_1, 3, 7);
-    posPieces(whiteKing_2, 4, 7);
+    posPieces(whiteKing, 3, 7);
+    posPieces(whiteQueen, 4, 7);
     posPieces(whiteSpear_2, 5, 7);
     posPieces(whiteBow_2, 6, 7);
     posPieces(whiteCatapult_2, 7, 7);
@@ -366,7 +361,6 @@ public class MainActivity extends Activity {
       }
     }
   }
-
 
 
   @Override

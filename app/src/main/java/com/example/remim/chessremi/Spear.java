@@ -8,9 +8,6 @@ import java.util.ArrayList;
 
 public class Spear extends Piece {
 
-  private ArrayList<Coords> moves;
-  private ArrayList<Coords> actions;
-
   public Spear(PlayerColor color){
     setLife(1);
     setJump(false);

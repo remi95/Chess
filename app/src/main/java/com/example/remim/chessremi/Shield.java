@@ -8,9 +8,6 @@ import java.util.ArrayList;
 
 public class Shield extends Piece {
 
-  private ArrayList<Coords> moves;
-  private ArrayList<Coords> actions;
-
   public Shield(PlayerColor color){
     setLife(2);
     setJump(false);
@@ -24,7 +21,7 @@ public class Shield extends Piece {
 
     moves = getMoves();
     initMoves();
-    actions = null;
+    actions = getActions();
   }
 
   public void initMoves(){
