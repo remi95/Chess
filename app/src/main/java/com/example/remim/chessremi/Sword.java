@@ -14,6 +14,7 @@ public class Sword extends Piece {
   public Sword(PlayerColor color){
     setLife(1);
     setJump(false);
+    setJumpAttack(false);
     setColor(color);
 
     if(color == PlayerColor.White)

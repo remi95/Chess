@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -26,15 +27,15 @@ public class MainActivity extends Activity {
 
   private LinearLayout llContent;
   private GridLayout glBoard;
-  private TextView tvBlackPlayer, tvWhitePlayer,
-    tvBlackShield, tvBlackSword, tvBlackBow, tvBlackSpear, tvBlackCatapult, tvBlackCrown,
-    tvWhiteShield, tvWhiteSword, tvWhiteBow, tvWhiteSpear, tvWhiteCatapult, tvWhiteCrown;
-  private Shield blackShield, whiteShield;
-  private Sword blackSword, whiteSword;
-  private Bow blackBow, whiteBow;
-  private Spear blackSpear, whiteSpear;
-  private Catapult blackCatapult, whiteCatapult;
-  private King blackKing, whiteKing;
+  private TextView tvBlackPlayer, tvWhitePlayer;
+  private Shield blackShield_1, blackShield_2, blackShield_3, blackShield_4,
+    whiteShield_1, whiteShield_2, whiteShield_3, whiteShield_4;
+  private Sword blackSword_1, blackSword_2, blackSword_3, blackSword_4,
+    whiteSword_1, whiteSword_2, whiteSword_3, whiteSword_4;
+  private Bow blackBow_1, blackBow_2, whiteBow_1, whiteBow_2;
+  private Spear blackSpear_1, blackSpear_2, whiteSpear_1, whiteSpear_2;
+  private Catapult blackCatapult_1, blackCatapult_2, whiteCatapult_1, whiteCatapult_2;
+  private King blackKing_1, blackKing_2, whiteKing_1, whiteKing_2;
   private ArrayList<RelativeLayout> allCases = new ArrayList<>();
   private ArrayList<RelativeLayout> changedCases = new ArrayList<>();
   private RelativeLayout.OnClickListener clickListener;
@@ -43,20 +44,40 @@ public class MainActivity extends Activity {
 
   public void initPions(){
 //    BLACK PIONS
-    blackShield = new Shield(PlayerColor.Black);
-    blackSword = new Sword(PlayerColor.Black);
-    blackBow = new Bow(PlayerColor.Black);
-    blackSpear = new Spear(PlayerColor.Black);
-    blackCatapult = new Catapult(PlayerColor.Black);
-    blackKing = new King(PlayerColor.Black);
+    blackShield_1 = new Shield(PlayerColor.Black);
+    blackShield_2 = new Shield(PlayerColor.Black);
+    blackShield_3 = new Shield(PlayerColor.Black);
+    blackShield_4 = new Shield(PlayerColor.Black);
+    blackSword_1 = new Sword(PlayerColor.Black);
+    blackSword_2 = new Sword(PlayerColor.Black);
+    blackSword_3 = new Sword(PlayerColor.Black);
+    blackSword_4 = new Sword(PlayerColor.Black);
+    blackBow_1 = new Bow(PlayerColor.Black);
+    blackBow_2 = new Bow(PlayerColor.Black);
+    blackSpear_1 = new Spear(PlayerColor.Black);
+    blackSpear_2 = new Spear(PlayerColor.Black);
+    blackCatapult_1 = new Catapult(PlayerColor.Black);
+    blackCatapult_2 = new Catapult(PlayerColor.Black);
+    blackKing_1 = new King(PlayerColor.Black);
+    blackKing_2 = new King(PlayerColor.Black);
 
 //    WHITE PIONS
-    whiteShield = new Shield(PlayerColor.White);
-    whiteSword = new Sword(PlayerColor.White);
-    whiteBow = new Bow(PlayerColor.White);
-    whiteSpear = new Spear(PlayerColor.White);
-    whiteCatapult = new Catapult(PlayerColor.White);
-    whiteKing = new King(PlayerColor.White);
+    whiteShield_1 = new Shield(PlayerColor.White);
+    whiteShield_2 = new Shield(PlayerColor.White);
+    whiteShield_3 = new Shield(PlayerColor.White);
+    whiteShield_4 = new Shield(PlayerColor.White);
+    whiteSword_1 = new Sword(PlayerColor.White);
+    whiteSword_2 = new Sword(PlayerColor.White);
+    whiteSword_3 = new Sword(PlayerColor.White);
+    whiteSword_4 = new Sword(PlayerColor.White);
+    whiteBow_1 = new Bow(PlayerColor.White);
+    whiteBow_2 = new Bow(PlayerColor.White);
+    whiteSpear_1 = new Spear(PlayerColor.White);
+    whiteSpear_2 = new Spear(PlayerColor.White);
+    whiteCatapult_1 = new Catapult(PlayerColor.White);
+    whiteCatapult_2 = new Catapult(PlayerColor.White);
+    whiteKing_1 = new King(PlayerColor.White);
+    whiteKing_2 = new King(PlayerColor.White);
   }
 
   public void posPieces(Piece piece, int xPos, int yPos){
@@ -88,24 +109,12 @@ public class MainActivity extends Activity {
     glBoard = findViewById(R.id.glBoard);
     tvBlackPlayer = findViewById(R.id.tvBlackPlayer);
     tvWhitePlayer = findViewById(R.id.tvWhitePlayer);
-//    tvBlackShield = findViewById(R.id.tvBlackShield);
-//    tvBlackSword = findViewById(R.id.tvBlackSword);
-//    tvBlackBow = findViewById(R.id.tvBlackBow);
-//    tvBlackSpear = findViewById(R.id.tvBlackSpear);
-//    tvBlackCatapult = findViewById(R.id.tvBlackCatapult);
-//    tvBlackCrown = findViewById(R.id.tvBlackCrown);
-//    tvWhiteShield = findViewById(R.id.tvWhiteShield);
-//    tvWhiteSword = findViewById(R.id.tvWhiteSword);
-//    tvWhiteBow = findViewById(R.id.tvWhiteBow);
-//    tvWhiteSpear = findViewById(R.id.tvWhiteSpear);
-//    tvWhiteCatapult = findViewById(R.id.tvWhiteCatapult);
-//    tvWhiteCrown = findViewById(R.id.tvWhiteCrown);
 
     DisplayMetrics metrics = new DisplayMetrics();
     getWindowManager().getDefaultDisplay().getMetrics(metrics);
     int caseSize = metrics.widthPixels/8;
 
-//    EACH CASE HAS A CLICK LISTENER && FORCE SQUARE CASE
+//    EACH CASE HAS A CLICK LISTENER & FORCE SQUARE CASE
     for(int i = 0; i < glBoard.getChildCount(); i++){
       GridLayout.LayoutParams glParams = new GridLayout.LayoutParams();
       glParams.width = caseSize;
@@ -119,39 +128,39 @@ public class MainActivity extends Activity {
 //    glBoard.setOnClickListener(clickListener);
 
 //    PIECES POSITIONS
-    posPieces(blackCatapult, 0, 0);
-    posPieces(blackBow, 1, 0);
-    posPieces(blackSpear, 2, 0);
-    posPieces(blackKing, 3, 0);
-    posPieces(blackKing, 4, 0);
-    posPieces(blackSpear, 5, 0);
-    posPieces(blackBow, 6, 0);
-    posPieces(blackCatapult, 7, 0);
-    posPieces(blackSword, 0, 1);
-    posPieces(blackShield, 1, 1);
-    posPieces(blackSword, 2, 1);
-    posPieces(blackShield, 3, 1);
-    posPieces(blackShield, 4, 1);
-    posPieces(blackSword, 5, 1);
-    posPieces(blackShield, 6, 1);
-    posPieces(blackSword, 7, 1);
+    posPieces(blackCatapult_1, 0, 0);
+    posPieces(blackBow_1, 1, 0);
+    posPieces(blackSpear_1, 2, 0);
+    posPieces(blackKing_1, 3, 0);
+    posPieces(blackKing_2, 4, 0);
+    posPieces(blackSpear_2, 5, 0);
+    posPieces(blackBow_2, 6, 0);
+    posPieces(blackCatapult_2, 7, 0);
+    posPieces(blackSword_1, 0, 1);
+    posPieces(blackShield_1, 1, 1);
+    posPieces(blackSword_2, 2, 1);
+    posPieces(blackShield_2, 3, 1);
+    posPieces(blackShield_3, 4, 1);
+    posPieces(blackSword_4, 5, 1);
+    posPieces(blackShield_3, 6, 1);
+    posPieces(blackSword_4, 7, 1);
 
-    posPieces(whiteSword, 0, 6);
-    posPieces(whiteShield, 1, 6);
-    posPieces(whiteSword, 2, 6);
-    posPieces(whiteShield, 3, 6);
-    posPieces(whiteShield, 4, 6);
-    posPieces(whiteSword, 5, 6);
-    posPieces(whiteShield, 6, 6);
-    posPieces(whiteSword, 7, 6);
-    posPieces(whiteCatapult, 0, 7);
-    posPieces(whiteBow, 1, 7);
-    posPieces(whiteSpear, 2, 7);
-    posPieces(whiteKing, 3, 7);
-    posPieces(whiteKing, 4, 7);
-    posPieces(whiteSpear, 5, 7);
-    posPieces(whiteBow, 6, 7);
-    posPieces(whiteCatapult, 7, 7);
+    posPieces(whiteSword_1, 0, 6);
+    posPieces(whiteShield_1, 1, 6);
+    posPieces(whiteSword_2, 2, 6);
+    posPieces(whiteShield_2, 3, 6);
+    posPieces(whiteShield_3, 4, 6);
+    posPieces(whiteSword_3, 5, 6);
+    posPieces(whiteShield_4, 6, 6);
+    posPieces(whiteSword_4, 7, 6);
+    posPieces(whiteCatapult_1, 0, 7);
+    posPieces(whiteBow_1, 1, 7);
+    posPieces(whiteSpear_1, 2, 7);
+    posPieces(whiteKing_1, 3, 7);
+    posPieces(whiteKing_2, 4, 7);
+    posPieces(whiteSpear_2, 5, 7);
+    posPieces(whiteBow_2, 6, 7);
+    posPieces(whiteCatapult_2, 7, 7);
   }
 
   public void caseClickListener(){
@@ -165,10 +174,8 @@ public class MainActivity extends Activity {
 //        MOVE OR ACTION ?
         for (RelativeLayout eachCase : changedCases){
           if (clickedCase.equals(eachCase)){
-//            NO PIECE = MOVE
             if (clickedCase.getChildCount() == 0)
-              move(clickedCase, lastClickedCase);
-//            PIECE = ACTION
+              move(clickedCase);
             else
               action(clickedCase);
           }
@@ -254,7 +261,7 @@ public class MainActivity extends Activity {
       //      CHECK FAKE CASE
       if (pieceRight && ( (targetNumCase % 8 == 0) || ((targetNumCase - 1) % 8 == 0) ))
         fakeCase = true;
-      else if (pieceLeft && ( ((targetNumCase + 1) % 8 == 0) || ((targetNumCase +2) % 8 == 0) ))
+      if (pieceLeft && ( ((targetNumCase + 1) % 8 == 0) || ((targetNumCase +2) % 8 == 0) ))
         fakeCase = true;
       else
         fakeCase = false;
@@ -262,6 +269,7 @@ public class MainActivity extends Activity {
 //      IF PIECE, CHECK IF IS ENNEMY -> RED
       if (targetNumCase >= 0 && targetNumCase < 64 && !fakeCase) {
         RelativeLayout targetCase = (RelativeLayout) glBoard.getChildAt(targetNumCase);
+
         if (targetCase.getChildCount() > 0) {
           ImageView neighbor = (ImageView) targetCase.getChildAt(0);
           Piece neighborClass = (Piece) neighbor.getTag();
@@ -271,28 +279,71 @@ public class MainActivity extends Activity {
             targetCase.setBackgroundColor(getResources().getColor(R.color.red));
             changedCases.add(targetCase);
           }
+          else if (piece.getClass().getSimpleName().equals("Spear")) {
+            return;
+          }
         }
       }
     }
   }
 
-  public void move(RelativeLayout clickedCase, RelativeLayout lastClickedCase){
+  public void move(RelativeLayout clickedCase){
     ImageView targetPiece = (ImageView) lastClickedCase.getChildAt(0);
     lastClickedCase.removeView(targetPiece);
     clickedCase.addView(targetPiece);
   }
 
   public void action(RelativeLayout clickedCase){
-    ImageView targetPiece = (ImageView) clickedCase.getChildAt(0);
-    Piece piece = (Piece) targetPiece.getTag();
-    PlayerColor color = piece.getColor();
-    String className = piece.getClass().getSimpleName();
-    String idString = "tv" + String.valueOf(color) + className;
-    int id = getResources().getIdentifier(idString, "id", getPackageName());
-    TextView tvTarget = findViewById(id);
-    int previousValue = Integer.parseInt(tvTarget.getText().toString());
-    tvTarget.setText(String.valueOf(previousValue - 1));
-    clickedCase.removeView(targetPiece);
+//    FOR SPEAR PIECE ONLY
+    if (lastClickedCase.getChildAt(0).getTag().getClass().getSimpleName().equals("Spear")) {
+      boolean isBlocked = spearAction(clickedCase);
+      if (isBlocked)
+        return;
+    }
+
+//    GET PIECE INFOS
+    ImageView targetPieceImg = (ImageView) clickedCase.getChildAt(0);
+    Piece targetPiece = (Piece) targetPieceImg.getTag();
+    PlayerColor color = targetPiece.getColor();
+    String className = targetPiece.getClass().getSimpleName();
+
+    targetPiece.decreaseLife();
+
+    if (targetPiece.getLife() == 0) {
+      String idString = "tv" + String.valueOf(color) + className;
+      int tvId = getResources().getIdentifier(idString, "id", getPackageName());
+      TextView tvTarget = findViewById(tvId);
+      int previousValue = Integer.parseInt(tvTarget.getText().toString());
+
+      tvTarget.setText(String.valueOf(previousValue - 1));
+      clickedCase.removeView(targetPieceImg);
+    }
+    else if (targetPiece.getLife() == 1) {
+      if (className.equals("Shield")) {
+        int brokenShield = color == PlayerColor.Black ? R.drawable.b_broken_shield : R.drawable.w_broken_shield;
+          targetPieceImg.setImageResource(brokenShield);
+      }
+    }
+  }
+
+  public boolean spearAction(RelativeLayout clickedCase){
+    int spearPos = glBoard.indexOfChild(lastClickedCase);
+    int clickedPos = glBoard.indexOfChild(clickedCase);
+
+//    WHEN SECOND ACTION CASE IS CLICKED
+    if (Math.abs(spearPos - clickedPos) == 16) {
+      int otherTouched = spearPos < clickedPos ? spearPos + 8 : spearPos - 8;
+      RelativeLayout otherCaseTouched = (RelativeLayout) glBoard.getChildAt(otherTouched);
+      if (otherCaseTouched.getChildCount() > 0)
+        if (otherCaseTouched.getChildAt(0).getTag().getClass().getSimpleName().equals("Shield")) {
+          action(otherCaseTouched);
+          return true;
+        }
+        else {
+          action(otherCaseTouched);
+        }
+    }
+    return false;
   }
 
   public void resetCasesColors(){

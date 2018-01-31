@@ -14,6 +14,7 @@ public class Spear extends Piece {
   public Spear(PlayerColor color){
     setLife(1);
     setJump(false);
+    setJumpAttack(false);
     setColor(color);
 
     if(color == PlayerColor.White)

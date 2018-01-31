@@ -7,18 +7,20 @@ import java.util.ArrayList;
  */
 
 public class Piece {
-  private ArrayList<Coords> moves = new ArrayList<>();
-  private ArrayList<Coords> actions = new ArrayList<>();
-  private int life;
-  private boolean jump;
-  private Integer img;
-  private PlayerColor color;
+  protected ArrayList<Coords> moves = new ArrayList<>();
+  protected ArrayList<Coords> actions = new ArrayList<>();
+  protected int life;
+  protected boolean jump;
+  protected boolean jumpAttack;
+  protected Integer img;
+  protected PlayerColor color;
 
   public Piece() {
     this.moves = moves;
     this.actions = actions;
     this.life = life;
     this.jump = jump;
+    this.jumpAttack = jumpAttack;
   }
 
   public Integer getImg() {
@@ -51,6 +53,18 @@ public class Piece {
 
   public void setLife(int life) {
     this.life = life;
+  }
+
+  public boolean isJumpAttack() {
+    return jumpAttack;
+  }
+
+  public void setJumpAttack(boolean jumpAttack) {
+    this.jumpAttack = jumpAttack;
+  }
+
+  public void decreaseLife(){
+    this.life -= 1;
   }
 
   public boolean isJump() {

@@ -14,6 +14,7 @@ public class Catapult extends Piece {
   public Catapult(PlayerColor color){
     setLife(1);
     setJump(false);
+    setJumpAttack(true);
     setColor(color);
 
     if(color == PlayerColor.White)

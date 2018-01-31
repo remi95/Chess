@@ -14,6 +14,7 @@ public class Shield extends Piece {
   public Shield(PlayerColor color){
     setLife(2);
     setJump(false);
+    setJumpAttack(false);
     setColor(color);
 
     if(color == PlayerColor.White)

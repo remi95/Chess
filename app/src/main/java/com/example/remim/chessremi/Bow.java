@@ -8,12 +8,10 @@ import java.util.ArrayList;
 
 public class Bow extends Piece {
 
-  private ArrayList<Coords> moves;
-  private ArrayList<Coords> actions;
-
   public Bow(PlayerColor color){
     setLife(1);
     setJump(true);
+    setJumpAttack(true);
     setColor(color);
 
     if(color == PlayerColor.White)

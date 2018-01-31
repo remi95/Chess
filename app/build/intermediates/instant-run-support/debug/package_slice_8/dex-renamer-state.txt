@@ -1,4 +1,4 @@
-#Wed Jan 17 23:08:52 CET 2018
+#Wed Jan 31 15:03:13 CET 2018
 base.0=C\:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\27
 renamed.0=classes.dex
 file.0=C\:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\27\\classes.dex

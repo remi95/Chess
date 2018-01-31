@@ -14,6 +14,7 @@ public class King extends Piece {
   public King(PlayerColor color){
     setLife(1);
     setJump(false);
+    setJumpAttack(false);
     setColor(color);
 
     if(color == PlayerColor.White)

@@ -68,6 +68,10 @@
         "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\cf5be5c12a7ee7bc34a557846fe79997\\res\\drawable-hdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
+        "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable_b_broken_shield.png.flat",
+        "source": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\src\\main\\res\\drawable\\b_broken_shield.png"
+    },
+    {
         "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_seekbar_track_material.xml.flat",
         "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\cf5be5c12a7ee7bc34a557846fe79997\\res\\drawable\\abc_seekbar_track_material.xml"
     },
@@ -1130,6 +1134,10 @@
     {
         "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_16dp.png.flat",
         "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\cf5be5c12a7ee7bc34a557846fe79997\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_16dp.png"
+    },
+    {
+        "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable_w_broken_shield.png.flat",
+        "source": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\src\\main\\res\\drawable\\w_broken_shield.png"
     },
     {
         "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
