@@ -17,9 +17,9 @@ public class King extends Piece {
     setColor(color);
 
     if(color == PlayerColor.White)
-      setImg(R.drawable.w_crown);
+      setImg(R.drawable.w_king);
     else
-      setImg(R.drawable.b_crown);
+      setImg(R.drawable.b_king);
 
     moves = getMoves();
     initMoves();

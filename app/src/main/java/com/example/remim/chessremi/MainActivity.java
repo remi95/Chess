@@ -26,8 +26,9 @@ public class MainActivity extends Activity {
 
   private LinearLayout llContent;
   private GridLayout glBoard;
-  private TextView tvBlackPlayer;
-  private TextView tvWhitePlayer;
+  private TextView tvBlackPlayer, tvWhitePlayer,
+    tvBlackShield, tvBlackSword, tvBlackBow, tvBlackSpear, tvBlackCatapult, tvBlackCrown,
+    tvWhiteShield, tvWhiteSword, tvWhiteBow, tvWhiteSpear, tvWhiteCatapult, tvWhiteCrown;
   private Shield blackShield, whiteShield;
   private Sword blackSword, whiteSword;
   private Bow blackBow, whiteBow;
@@ -87,15 +88,24 @@ public class MainActivity extends Activity {
     glBoard = findViewById(R.id.glBoard);
     tvBlackPlayer = findViewById(R.id.tvBlackPlayer);
     tvWhitePlayer = findViewById(R.id.tvWhitePlayer);
+//    tvBlackShield = findViewById(R.id.tvBlackShield);
+//    tvBlackSword = findViewById(R.id.tvBlackSword);
+//    tvBlackBow = findViewById(R.id.tvBlackBow);
+//    tvBlackSpear = findViewById(R.id.tvBlackSpear);
+//    tvBlackCatapult = findViewById(R.id.tvBlackCatapult);
+//    tvBlackCrown = findViewById(R.id.tvBlackCrown);
+//    tvWhiteShield = findViewById(R.id.tvWhiteShield);
+//    tvWhiteSword = findViewById(R.id.tvWhiteSword);
+//    tvWhiteBow = findViewById(R.id.tvWhiteBow);
+//    tvWhiteSpear = findViewById(R.id.tvWhiteSpear);
+//    tvWhiteCatapult = findViewById(R.id.tvWhiteCatapult);
+//    tvWhiteCrown = findViewById(R.id.tvWhiteCrown);
 
     DisplayMetrics metrics = new DisplayMetrics();
     getWindowManager().getDefaultDisplay().getMetrics(metrics);
     int caseSize = metrics.widthPixels/8;
 
-
-
-
-//    EACH CASE HAS A CLICK LISTENER
+//    EACH CASE HAS A CLICK LISTENER && FORCE SQUARE CASE
     for(int i = 0; i < glBoard.getChildCount(); i++){
       GridLayout.LayoutParams glParams = new GridLayout.LayoutParams();
       glParams.width = caseSize;
@@ -152,19 +162,15 @@ public class MainActivity extends Activity {
 //        GET CLICKED CASE
         RelativeLayout clickedCase = (RelativeLayout) v;
 
+//        MOVE OR ACTION ?
         for (RelativeLayout eachCase : changedCases){
           if (clickedCase.equals(eachCase)){
-//            MOVE
-            if (clickedCase.getChildCount() == 0){
-//              CALL MOVE FUNCTION
-              ImageView targetPiece = (ImageView) lastClickedCase.getChildAt(0);
-              lastClickedCase.removeView(targetPiece);
-              clickedCase.addView(targetPiece);
-            }
-//            ACTION
-            else{
-//              CALL ACTION FUNCTION
-            }
+//            NO PIECE = MOVE
+            if (clickedCase.getChildCount() == 0)
+              move(clickedCase, lastClickedCase);
+//            PIECE = ACTION
+            else
+              action(clickedCase);
           }
         }
 
@@ -270,6 +276,25 @@ public class MainActivity extends Activity {
     }
   }
 
+  public void move(RelativeLayout clickedCase, RelativeLayout lastClickedCase){
+    ImageView targetPiece = (ImageView) lastClickedCase.getChildAt(0);
+    lastClickedCase.removeView(targetPiece);
+    clickedCase.addView(targetPiece);
+  }
+
+  public void action(RelativeLayout clickedCase){
+    ImageView targetPiece = (ImageView) clickedCase.getChildAt(0);
+    Piece piece = (Piece) targetPiece.getTag();
+    PlayerColor color = piece.getColor();
+    String className = piece.getClass().getSimpleName();
+    String idString = "tv" + String.valueOf(color) + className;
+    int id = getResources().getIdentifier(idString, "id", getPackageName());
+    TextView tvTarget = findViewById(id);
+    int previousValue = Integer.parseInt(tvTarget.getText().toString());
+    tvTarget.setText(String.valueOf(previousValue - 1));
+    clickedCase.removeView(targetPiece);
+  }
+
   public void resetCasesColors(){
     for (RelativeLayout eachCase : changedCases){
 //      CALCUL COORDINATES
@@ -277,20 +302,16 @@ public class MainActivity extends Activity {
       int y = (int) numCase / 8;
       int x = numCase % 8;
       if (y % 2 == 0){
-        if (x % 2 == 0){
+        if (x % 2 == 0)
           eachCase.setBackgroundColor(getResources().getColor(R.color.brown));
-        }
-        else{
+        else
           eachCase.setBackgroundColor(getResources().getColor(R.color.beige));
-        }
       }
       else{
-        if (x % 2 == 0){
+        if (x % 2 == 0)
           eachCase.setBackgroundColor(getResources().getColor(R.color.beige));
-        }
-        else{
+        else
           eachCase.setBackgroundColor(getResources().getColor(R.color.brown));
-        }
       }
     }
   }

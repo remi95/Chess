@@ -2261,7 +2261,7 @@ public final class R {
     public static final int abc_vector_test=0x7f060053;
     public static final int b_bow=0x7f060054;
     public static final int b_catapult=0x7f060055;
-    public static final int b_crown=0x7f060056;
+    public static final int b_king=0x7f060056;
     public static final int b_shield=0x7f060057;
     public static final int b_spear=0x7f060058;
     public static final int b_sword=0x7f060059;
@@ -2283,7 +2283,7 @@ public final class R {
     public static final int tooltip_frame_light=0x7f060069;
     public static final int w_bow=0x7f06006a;
     public static final int w_catapult=0x7f06006b;
-    public static final int w_crown=0x7f06006c;
+    public static final int w_king=0x7f06006c;
     public static final int w_shield=0x7f06006d;
     public static final int w_spear=0x7f06006e;
     public static final int w_sword=0x7f06006f;
@@ -2409,13 +2409,25 @@ public final class R {
     public static final int topPanel=0x7f070075;
     public static final int trBlack=0x7f070076;
     public static final int trWhite=0x7f070077;
-    public static final int tvBlackPlayer=0x7f070078;
-    public static final int tvWhitePlayer=0x7f070079;
-    public static final int uniform=0x7f07007a;
-    public static final int up=0x7f07007b;
-    public static final int useLogo=0x7f07007c;
-    public static final int withText=0x7f07007d;
-    public static final int wrap_content=0x7f07007e;
+    public static final int tvBlackBow=0x7f070078;
+    public static final int tvBlackCatapult=0x7f070079;
+    public static final int tvBlackKing=0x7f07007a;
+    public static final int tvBlackPlayer=0x7f07007b;
+    public static final int tvBlackShield=0x7f07007c;
+    public static final int tvBlackSpear=0x7f07007d;
+    public static final int tvBlackSword=0x7f07007e;
+    public static final int tvWhiteBow=0x7f07007f;
+    public static final int tvWhiteCatapult=0x7f070080;
+    public static final int tvWhiteKing=0x7f070081;
+    public static final int tvWhitePlayer=0x7f070082;
+    public static final int tvWhiteShield=0x7f070083;
+    public static final int tvWhiteSpear=0x7f070084;
+    public static final int tvWhiteSword=0x7f070085;
+    public static final int uniform=0x7f070086;
+    public static final int up=0x7f070087;
+    public static final int useLogo=0x7f070088;
+    public static final int withText=0x7f070089;
+    public static final int wrap_content=0x7f07008a;
   }
   public static final class integer {
     public static final int abc_config_activityDefaultDur=0x7f080000;

@@ -45,7 +45,8 @@
       android:padding="2dp"
       />
     <TextView
-      android:text="0"
+      android:id="@+id/tvBlackShield"
+      android:text="4"
       android:textColor="@color/black"
       android:gravity="center"
       android:layout_weight="1"
@@ -58,7 +59,8 @@
       android:padding="2dp"
       />
     <TextView
-      android:text="0"
+      android:id="@+id/tvBlackSword"
+      android:text="4"
       android:textColor="@color/black"
       android:gravity="center"
       android:layout_weight="1"
@@ -71,7 +73,8 @@
       android:padding="2dp"
       />
     <TextView
-      android:text="0"
+      android:id="@+id/tvBlackBow"
+      android:text="2"
       android:textColor="@color/black"
       android:gravity="center"
       android:layout_weight="1"
@@ -84,7 +87,8 @@
       android:padding="2dp"
       />
     <TextView
-      android:text="0"
+      android:id="@+id/tvBlackSpear"
+      android:text="2"
       android:textColor="@color/black"
       android:gravity="center"
       android:layout_weight="1"
@@ -97,7 +101,8 @@
       android:padding="2dp"
       />
     <TextView
-      android:text="0"
+      android:id="@+id/tvBlackCatapult"
+      android:text="2"
       android:textColor="@color/black"
       android:gravity="center"
       android:layout_weight="1"
@@ -105,12 +110,13 @@
     <ImageView
       android:scaleType="fitCenter"
       android:adjustViewBounds="true"
-      android:src="@drawable/b_crown"
+      android:src="@drawable/b_king"
       android:layout_weight="1"
       android:padding="2dp"
       />
     <TextView
-      android:text="0"
+      android:id="@+id/tvBlackKing"
+      android:text="2"
       android:textColor="@color/black"
       android:gravity="center"
       android:layout_weight="1"
@@ -526,7 +532,8 @@
       android:padding="2dp"
       />
     <TextView
-      android:text="0"
+      android:id="@+id/tvWhiteShield"
+      android:text="4"
       android:textColor="@color/black"
       android:gravity="center"
       android:layout_weight="1"
@@ -539,7 +546,8 @@
       android:padding="2dp"
       />
     <TextView
-      android:text="0"
+      android:id="@+id/tvWhiteSword"
+      android:text="4"
       android:textColor="@color/black"
       android:gravity="center"
       android:layout_weight="1"
@@ -552,7 +560,8 @@
       android:padding="2dp"
       />
     <TextView
-      android:text="0"
+      android:id="@+id/tvWhiteBow"
+      android:text="2"
       android:textColor="@color/black"
       android:gravity="center"
       android:layout_weight="1"
@@ -565,7 +574,8 @@
       android:padding="2dp"
       />
     <TextView
-      android:text="0"
+      android:id="@+id/tvWhiteSpear"
+      android:text="2"
       android:textColor="@color/black"
       android:gravity="center"
       android:layout_weight="1"
@@ -578,7 +588,8 @@
       android:padding="2dp"
       />
     <TextView
-      android:text="0"
+      android:id="@+id/tvWhiteCatapult"
+      android:text="2"
       android:textColor="@color/black"
       android:gravity="center"
       android:layout_weight="1"
@@ -586,12 +597,13 @@
     <ImageView
       android:scaleType="fitCenter"
       android:adjustViewBounds="true"
-      android:src="@drawable/w_crown"
+      android:src="@drawable/w_king"
       android:layout_weight="1"
       android:padding="2dp"
       />
     <TextView
-      android:text="0"
+      android:id="@+id/tvWhiteKing"
+      android:text="2"
       android:textColor="@color/black"
       android:gravity="center"
       android:layout_weight="1"
