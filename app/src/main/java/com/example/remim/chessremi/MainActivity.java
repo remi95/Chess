@@ -38,6 +38,7 @@ public class MainActivity extends Activity {
   private ArrayList<RelativeLayout> changedCases = new ArrayList<>();
   private RelativeLayout.OnClickListener clickListener;
   private RelativeLayout lastClickedCase;
+  private boolean pieceRight, pieceLeft;
 
   public void initPions(){
 //    BLACK PIONS
@@ -178,6 +179,19 @@ public class MainActivity extends Activity {
           ImageView ivImg = (ImageView) clickedCase.getChildAt(0);
           Piece piece = (Piece) ivImg.getTag();
 
+          if ((numCase + 1) % 8 == 0 || (numCase + 2 ) % 8 == 0) {
+            pieceRight = true;
+            pieceLeft = false;
+          }
+          else if (numCase % 8 == 0 || (numCase - 1) % 8 == 0) {
+            pieceLeft = true;
+            pieceRight = false;
+          }
+          else {
+            pieceLeft = false;
+            pieceRight = false;
+          }
+
           showMoves(piece, numCase);
           showActions(piece, numCase);
         }
@@ -188,20 +202,31 @@ public class MainActivity extends Activity {
   public void showMoves(Piece piece, int numCase){
     ArrayList<Coords> moves = piece.getMoves();
     PlayerColor myColor = piece.getColor();
+    boolean fakeCase;
 
     for (Coords move : moves){
       int x = move.getX();
       int y = move.getY();
 //      COLOR PLAYER PLAY ON DIRECTION
       int targetNumCase = numCase + (y * 8) + x;
-      if(myColor == PlayerColor.White) {
+      if(myColor == PlayerColor.White)
         targetNumCase = numCase - (y * 8) - x;
-      }
+
+//      CHECK FAKE CASE
+      if (pieceRight && ( (targetNumCase % 8 == 0) || ((targetNumCase - 1) % 8 == 0) ))
+        fakeCase = true;
+      else if (pieceLeft && ( ((targetNumCase + 1) % 8 == 0) || ((targetNumCase +2) % 8 == 0) ))
+        fakeCase = true;
+      else
+        fakeCase = false;
+
 //      GREEN IF FREE
-      RelativeLayout targetCase = (RelativeLayout) glBoard.getChildAt(targetNumCase);
-      if (targetCase.getChildCount() == 0) {
-        targetCase.setBackgroundColor(getResources().getColor(R.color.green));
-        changedCases.add(targetCase);
+      if (targetNumCase > 0 && targetNumCase < 64 && !fakeCase) {
+        RelativeLayout targetCase = (RelativeLayout) glBoard.getChildAt(targetNumCase);
+        if (targetCase.getChildCount() == 0) {
+          targetCase.setBackgroundColor(getResources().getColor(R.color.green));
+          changedCases.add(targetCase);
+        }
       }
     }
   }
@@ -209,6 +234,7 @@ public class MainActivity extends Activity {
   public void showActions(Piece piece, int numCase){
     ArrayList<Coords> actions = piece.getActions();
     PlayerColor myColor = piece.getColor();
+    boolean fakeCase;
 
     for (Coords action : actions){
       int x = action.getX();
@@ -218,16 +244,27 @@ public class MainActivity extends Activity {
       if(myColor == PlayerColor.White) {
         targetNumCase = numCase - (y * 8) - x;
       }
+
+      //      CHECK FAKE CASE
+      if (pieceRight && ( (targetNumCase % 8 == 0) || ((targetNumCase - 1) % 8 == 0) ))
+        fakeCase = true;
+      else if (pieceLeft && ( ((targetNumCase + 1) % 8 == 0) || ((targetNumCase +2) % 8 == 0) ))
+        fakeCase = true;
+      else
+        fakeCase = false;
+
 //      IF PIECE, CHECK IF IS ENNEMY -> RED
-      RelativeLayout targetCase = (RelativeLayout) glBoard.getChildAt(targetNumCase);
-      if (targetCase.getChildCount() > 0) {
-        ImageView neighbor = (ImageView) targetCase.getChildAt(0);
-        Piece neighborClass = (Piece) neighbor.getTag();
-        PlayerColor neighborColor = neighborClass.getColor();
-        boolean isEnnemy = (neighborColor != myColor);
-        if (isEnnemy) {
-          targetCase.setBackgroundColor(getResources().getColor(R.color.red));
-          changedCases.add(targetCase);
+      if (targetNumCase >= 0 && targetNumCase < 64 && !fakeCase) {
+        RelativeLayout targetCase = (RelativeLayout) glBoard.getChildAt(targetNumCase);
+        if (targetCase.getChildCount() > 0) {
+          ImageView neighbor = (ImageView) targetCase.getChildAt(0);
+          Piece neighborClass = (Piece) neighbor.getTag();
+          PlayerColor neighborColor = neighborClass.getColor();
+          boolean isEnnemy = (neighborColor != myColor);
+          if (isEnnemy) {
+            targetCase.setBackgroundColor(getResources().getColor(R.color.red));
+            changedCases.add(targetCase);
+          }
         }
       }
     }
