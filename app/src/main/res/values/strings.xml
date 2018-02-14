@@ -2,9 +2,14 @@
   <string name="app_name">Chess</string>
   <string name="player_1">Joueur 1</string>
   <string name="player_2">Joueur 2</string>
+
   <string name="nb_pieces_1">1</string>
   <string name="nb_pieces_2">2</string>
   <string name="nb_pieces_3">3</string>
   <string name="nb_pieces_4">4</string>
+
+  <string name="finish">Terminer</string>
   <string name="exit">X</string>
+
+  <string name="two_players">2 Joueurs</string>
 </resources>

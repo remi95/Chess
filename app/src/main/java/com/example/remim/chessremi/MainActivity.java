@@ -1,15 +1,22 @@
 package com.example.remim.chessremi;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -19,8 +26,10 @@ import java.util.ArrayList;
 
 public class MainActivity extends Activity {
 
-  private LinearLayout llContent;
+  private Context context;
+  private RelativeLayout rlContent;
   private GridLayout glBoard;
+  private String player1, player2;
   private TextView tvBlackPlayer, tvWhitePlayer;
   private Shield blackShield_1, blackShield_2, blackShield_3, blackShield_4,
     whiteShield_1, whiteShield_2, whiteShield_3, whiteShield_4;
@@ -33,9 +42,12 @@ public class MainActivity extends Activity {
   private Queen blackQueen, whiteQueen;
   private ArrayList<RelativeLayout> allCases = new ArrayList<>();
   private ArrayList<RelativeLayout> changedCases = new ArrayList<>();
-  private RelativeLayout.OnClickListener clickListener;
+  private RelativeLayout.OnClickListener caseClickListener;
+  private Button btnPause, btnWhiteFinish, btnBlackFinish;
+  private Button.OnClickListener finishClickListener, optionsClickListener;
   private RelativeLayout lastClickedCase;
-  private boolean pieceRight, pieceLeft;
+  private boolean pieceRight, pieceLeft, isWhiteTurn, hasMoved;
+  private Piece playerInMove;
 
   public void initPions(){
 //    BLACK PIONS
@@ -100,7 +112,7 @@ public class MainActivity extends Activity {
   }
 
   public void initComponents(){
-    llContent = findViewById(R.id.llContent);
+    rlContent = findViewById(R.id.glContent);
     glBoard = findViewById(R.id.glBoard);
     tvBlackPlayer = findViewById(R.id.tvBlackPlayer);
     tvWhitePlayer = findViewById(R.id.tvWhitePlayer);
@@ -115,10 +127,31 @@ public class MainActivity extends Activity {
       glParams.width = caseSize;
       glParams.height = caseSize;
       RelativeLayout rlEachCase = (RelativeLayout) glBoard.getChildAt(i);
-      rlEachCase.setOnClickListener(clickListener);
+      rlEachCase.setOnClickListener(caseClickListener);
       rlEachCase.setLayoutParams(glParams);
       allCases.add(rlEachCase);
     }
+
+    btnPause = findViewById(R.id.btnPause);
+    btnWhiteFinish = findViewById(R.id.btnWhiteFinish);
+    btnBlackFinish = findViewById(R.id.btnBlackFinish);
+
+    btnWhiteFinish.setOnClickListener(finishClickListener);
+    btnBlackFinish.setOnClickListener(finishClickListener);
+    btnPause.setOnClickListener(optionsClickListener);
+
+    Intent intent = getIntent();
+    Bundle extras = intent.getExtras();
+
+    if (extras != null) {
+      String strExtra1 = intent.getStringExtra("player1");
+      String strExtra2 = intent.getStringExtra("player2");
+      player1 = strExtra1.equals("") ? "Joueur 1" : strExtra1;
+      player2 = strExtra2.equals("") ? "Joueur 2" : strExtra2;
+    }
+
+    tvWhitePlayer.setText(player1);
+    tvBlackPlayer.setText(player2);
 
 //    glBoard.setOnClickListener(clickListener);
 
@@ -156,10 +189,85 @@ public class MainActivity extends Activity {
     posPieces(whiteSpear_2, 5, 7);
     posPieces(whiteBow_2, 6, 7);
     posPieces(whiteCatapult_2, 7, 7);
+
+    isWhiteTurn = true;
+    hasMoved = false;
+  }
+
+  public void btnFinishClickListener(){
+    finishClickListener = new Button.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Button clickedBtn = (Button) v;
+        if ((clickedBtn == btnWhiteFinish && isWhiteTurn) || (clickedBtn == btnBlackFinish && !isWhiteTurn)) {
+          if (hasMoved)
+            changeTurn();
+          else
+            Toast.makeText(context, "Vous devez obligatoirement déplacer un pion", Toast.LENGTH_SHORT).show();
+        }
+      }
+    };
+  }
+
+  public void btnOptionsClickListener(){
+    optionsClickListener = new Button.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        openPopup("Pause");
+      }
+    };
+  }
+
+  public void openPopup(String message){
+    LayoutInflater inflater = (LayoutInflater) context.getSystemService(LAYOUT_INFLATER_SERVICE);
+    final View popupView = inflater.inflate(R.layout.popup_options,null);
+    final PopupWindow optionsPopupWindow = new PopupWindow(
+      popupView,
+      LinearLayout.LayoutParams.WRAP_CONTENT,
+      LinearLayout.LayoutParams.WRAP_CONTENT
+    );
+
+    Button btnClose = popupView.findViewById(R.id.btnClose);
+    Button btnRestart = popupView.findViewById(R.id.btnRestart);
+    Button btnExit = popupView.findViewById(R.id.btnExit);
+    TextView tvMessage = popupView.findViewById(R.id.tvMessage);
+
+    tvMessage.setText(message);
+
+    btnClose.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        optionsPopupWindow.dismiss();
+      }
+    });
+
+    btnRestart.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        Intent intent = getIntent();
+        startActivity(intent);
+        finish();
+      }
+    });
+
+    btnExit.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        goToMenu();
+      }
+    });
+
+    optionsPopupWindow.showAtLocation(rlContent, Gravity.CENTER,0,0);
+  }
+
+  public void goToMenu(){
+    Intent intentStart = new Intent(this, MenuActivity.class);
+    startActivity(intentStart);
+    finish();
   }
 
   public void caseClickListener(){
-    clickListener = new RelativeLayout.OnClickListener() {
+    caseClickListener = new RelativeLayout.OnClickListener() {
       @Override
       public void onClick(View v) {
 
@@ -182,35 +290,46 @@ public class MainActivity extends Activity {
 
 //        GET PIECE AND CALL MOVES AND ACTIONS FUNCTIONS
         if (clickedCase.getChildCount() > 0){
-          lastClickedCase = clickedCase;
-          int numCase = glBoard.indexOfChild(clickedCase);
           ImageView ivImg = (ImageView) clickedCase.getChildAt(0);
           Piece piece = (Piece) ivImg.getTag();
+          PlayerColor color = piece.getColor();
 
-          if ((numCase + 1) % 8 == 0 || (numCase + 2 ) % 8 == 0) {
-            pieceRight = true;
-            pieceLeft = false;
-          }
-          else if (numCase % 8 == 0 || (numCase - 1) % 8 == 0) {
-            pieceLeft = true;
-            pieceRight = false;
-          }
-          else {
-            pieceLeft = false;
-            pieceRight = false;
+          if ((isWhiteTurn && color == PlayerColor.White) || (!isWhiteTurn && color == PlayerColor.Black)) {
+            lastClickedCase = clickedCase;
+            int numCase = glBoard.indexOfChild(clickedCase);
+
+            piecePlacement(numCase);
+
+            if (!hasMoved)
+              showMoves(piece, numCase);
+            showActions(piece, numCase);
           }
 
-          showMoves(piece, numCase);
-          showActions(piece, numCase);
+          if (hasMoved && changedCases.isEmpty() && piece == playerInMove)
+            changeTurn();
         }
       }
     };
   }
 
+  public void piecePlacement(int numCase){
+    if ((numCase + 1) % 8 == 0 || (numCase + 2 ) % 8 == 0) {
+      pieceRight = true;
+      pieceLeft = false;
+    }
+    else if (numCase % 8 == 0 || (numCase - 1) % 8 == 0) {
+      pieceLeft = true;
+      pieceRight = false;
+    }
+    else {
+      pieceLeft = false;
+      pieceRight = false;
+    }
+  }
+
   public void showMoves(Piece piece, int numCase){
     ArrayList<Coords> moves = piece.getMoves();
     PlayerColor myColor = piece.getColor();
-    boolean fakeCase;
 
     for (Coords move : moves){
       int x = move.getX();
@@ -221,12 +340,7 @@ public class MainActivity extends Activity {
         targetNumCase = numCase - (y * 8) - x;
 
 //      CHECK FAKE CASE
-      if (pieceRight && ( (targetNumCase % 8 == 0) || ((targetNumCase - 1) % 8 == 0) ))
-        fakeCase = true;
-      else if (pieceLeft && ( ((targetNumCase + 1) % 8 == 0) || ((targetNumCase +2) % 8 == 0) ))
-        fakeCase = true;
-      else
-        fakeCase = false;
+      boolean fakeCase = isFakeCase(targetNumCase);
 
 //      GREEN IF FREE
       if (targetNumCase > 0 && targetNumCase < 64 && !fakeCase) {
@@ -242,24 +356,17 @@ public class MainActivity extends Activity {
   public void showActions(Piece piece, int numCase){
     ArrayList<Coords> actions = piece.getActions();
     PlayerColor myColor = piece.getColor();
-    boolean fakeCase;
 
     for (Coords action : actions){
       int x = action.getX();
       int y = action.getY();
 //      COLOR PLAYER PLAY ON DIRECTION
       int targetNumCase = numCase + (y*8) + x;
-      if(myColor == PlayerColor.White) {
+      if(myColor == PlayerColor.White)
         targetNumCase = numCase - (y * 8) - x;
-      }
 
       //      CHECK FAKE CASE
-      if (pieceRight && ( (targetNumCase % 8 == 0) || ((targetNumCase - 1) % 8 == 0) ))
-        fakeCase = true;
-      if (pieceLeft && ( ((targetNumCase + 1) % 8 == 0) || ((targetNumCase +2) % 8 == 0) ))
-        fakeCase = true;
-      else
-        fakeCase = false;
+      boolean fakeCase = isFakeCase(targetNumCase);
 
 //      IF PIECE, CHECK IF IS ENNEMY -> RED
       if (targetNumCase >= 0 && targetNumCase < 64 && !fakeCase) {
@@ -270,22 +377,37 @@ public class MainActivity extends Activity {
           Piece neighborClass = (Piece) neighbor.getTag();
           PlayerColor neighborColor = neighborClass.getColor();
           boolean isEnnemy = (neighborColor != myColor);
+
           if (isEnnemy) {
             targetCase.setBackgroundColor(getResources().getColor(R.color.red));
             changedCases.add(targetCase);
           }
-          else if (piece.getClass().getSimpleName().equals("Spear")) {
-            return;
-          }
+//          else if (piece.getClass().getSimpleName().equals("Spear")) {
+//            return;
+//          }
         }
       }
     }
   }
 
+  public boolean isFakeCase(int targetNumCase){
+    boolean fakeCase;
+    if (pieceRight && ( (targetNumCase % 8 == 0) || ((targetNumCase - 1) % 8 == 0) ))
+      fakeCase = true;
+    else if (pieceLeft && ( ((targetNumCase + 1) % 8 == 0) || ((targetNumCase +2) % 8 == 0) ))
+      fakeCase = true;
+    else
+      fakeCase = false;
+    return fakeCase;
+  }
+
   public void move(RelativeLayout clickedCase){
     ImageView targetPiece = (ImageView) lastClickedCase.getChildAt(0);
+    Piece piece = (Piece) targetPiece.getTag();
     lastClickedCase.removeView(targetPiece);
     clickedCase.addView(targetPiece);
+    hasMoved = true;
+    playerInMove = piece;
   }
 
   public void action(RelativeLayout clickedCase){
@@ -312,6 +434,10 @@ public class MainActivity extends Activity {
 
       tvTarget.setText(String.valueOf(previousValue - 1));
       clickedCase.removeView(targetPieceImg);
+
+      if (className.equals("King")){
+        win(color);
+      }
     }
     else if (targetPiece.getLife() == 1) {
       if (className.equals("Shield")) {
@@ -319,6 +445,7 @@ public class MainActivity extends Activity {
           targetPieceImg.setImageResource(brokenShield);
       }
     }
+    changeTurn();
   }
 
   public boolean spearAction(RelativeLayout clickedCase){
@@ -329,14 +456,21 @@ public class MainActivity extends Activity {
     if (Math.abs(spearPos - clickedPos) == 16) {
       int otherTouched = spearPos < clickedPos ? spearPos + 8 : spearPos - 8;
       RelativeLayout otherCaseTouched = (RelativeLayout) glBoard.getChildAt(otherTouched);
-      if (otherCaseTouched.getChildCount() > 0)
-        if (otherCaseTouched.getChildAt(0).getTag().getClass().getSimpleName().equals("Shield")) {
+
+      if (otherCaseTouched.getChildCount() > 0) {
+        Piece otherPiece = (Piece) otherCaseTouched.getChildAt(0).getTag();
+        PlayerColor otherPieceColor = otherPiece.getColor();
+
+        if ((otherPieceColor == PlayerColor.White && isWhiteTurn) || (otherPieceColor == PlayerColor.Black && !isWhiteTurn))
+          Toast.makeText(context, "Traître, essaie de ne pas attaquer tes alliés", Toast.LENGTH_SHORT).show();
+
+        if (otherPiece.getClass().getSimpleName().equals("Shield")) {
           action(otherCaseTouched);
           return true;
         }
-        else {
+        else
           action(otherCaseTouched);
-        }
+      }
     }
     return false;
   }
@@ -362,6 +496,29 @@ public class MainActivity extends Activity {
     }
   }
 
+  public void changeTurn(){
+    hasMoved = false;
+    isWhiteTurn = !isWhiteTurn;
+    resetCasesColors();
+
+    if (isWhiteTurn) {
+      tvWhitePlayer.setBackgroundColor(getResources().getColor(R.color.green));
+      tvBlackPlayer.setBackgroundColor(getResources().getColor(R.color.darkBrown));
+    }
+    else {
+      tvBlackPlayer.setBackgroundColor(getResources().getColor(R.color.green));
+      tvWhitePlayer.setBackgroundColor(getResources().getColor(R.color.darkBrown));
+    }
+  }
+
+  public void win(PlayerColor diedColor){
+    for(int i = 0; i < glBoard.getChildCount(); i++){
+      RelativeLayout rlEachCase = (RelativeLayout) glBoard.getChildAt(i);
+      rlEachCase.setOnClickListener(null);
+    }
+    String winner = diedColor == PlayerColor.Black ? player1 : player2;
+    openPopup(winner + " a gagné !");
+  }
 
   @Override
   protected void onCreate(Bundle savedInstanceState){
@@ -369,7 +526,11 @@ public class MainActivity extends Activity {
     setContentView(R.layout.activity_main);
     Log.d("lifecycle","onCreate invoked");
 
+    context = getApplicationContext();
+
     caseClickListener();
+    btnFinishClickListener();
+    btnOptionsClickListener();
     initPions();
     initComponents();
   }
