@@ -10,7 +10,7 @@
     android:id="@+id/btnClose"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="@string/exit"
+    android:text="X"
     android:layout_gravity="end"
     android:background="@color/red"
     />
@@ -36,7 +36,7 @@
       android:id="@+id/btnRestart"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Restart"
+      android:text="@string/restart"
       android:layout_gravity="end"
       android:layout_weight="1"
       />
@@ -45,7 +45,7 @@
       android:id="@+id/btnExit"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Quitter"
+      android:text="@string/exit"
       android:layout_gravity="end"
       android:layout_weight="1"
       />

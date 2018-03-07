@@ -1,15 +1,53 @@
 <resources>
   <string name="app_name">Chess</string>
-  <string name="player_1">Joueur 1</string>
-  <string name="player_2">Joueur 2</string>
+  <string name="player_1">Joueur Blanc</string>
+  <string name="player_2">Joueur Noir</string>
 
   <string name="nb_pieces_1">1</string>
   <string name="nb_pieces_2">2</string>
   <string name="nb_pieces_3">3</string>
   <string name="nb_pieces_4">4</string>
 
+  <string name="restart">Recommencer</string>
+  <string name="cancel">Annuler</string>
+  <string name="exit">Quitter</string>
   <string name="finish">Terminer</string>
-  <string name="exit">X</string>
 
+  <string name="menu">Menu</string>
   <string name="two_players">2 Joueurs</string>
+  <string name="tuto">Tutoriel</string>
+
+  <string name="shield">Bouclier</string>
+  <string name="sword">Epée</string>
+  <string name="catapult">Catapulte</string>
+  <string name="bow">Arc</string>
+  <string name="spear">Lance</string>
+  <string name="queen">Reine</string>
+  <string name="king">Roi</string>
+
+  <string name="shield_move">Le bouclier peut bouger d\'une case, mais il ne peut jamais reculer.</string>
+  <string name="shield_life">Le bouclier ne peut pas attaquer, mais il est le seul pion à possèder deux points de vie.
+    Il doit donc recevoir deux attaques pour être vaincu. Vous pourrez reconnaître les boucliers déjà touchés grâce à la fissure qu'ils auront.</string>
+  <string name="sword_move">L\'épée peut se déplacer sur l\'une de ses cases adjacentes.</string>
+  <string name="sword_action">L\'épée peut attaquer sur l\'une de ses cases adjacentes.</string>
+  <string name="bow_move">L\'arc se déplace uniquement en diagonale, sur deux cases de portée.</string>
+  <string name="bow_action">L\'arc ne peut pas attaquer directement au corps à corps, mais sur toutes les cases qui suivent,
+  latéralement et diagonalement. Les flèches tirées passent au-dessus des ennemis !</string>
+  <string name="catapult_move">La catapulte peut se déplacer sur l\'une de ses cases adjacente.</string>
+  <string name="catapult_action">La catapulte n\'attaque que devant elle, à deux cases de portée.
+    Il peut atteindre la troisième ou la quatrième case devant lui, mais qu\'une seule des deux à la fois.</string>
+  <string name="spear_move">La lance peut se déplacer sur l\'une de ses cases adjacente.</string>
+  <string name="spear_action">La lance peut attaquer sur les deux cases devant lui. Il est le seul pion pouvant toucher plusieurs cases d\'un coup.
+  Pour cela, touchez la deuxième case. Attention: si un ennemi se trouve sur la deuxième case et qu\'un allié se trouve sur la première,
+  vous attaquez aussi votre allié !</string>
+  <string name="spear_action_special_1">Il y a une particularité en cas de multi-attaque, et si un bouclier se trouve sur la première case.
+  En effet, le bouclier ayant deux points de vie, il protégera la cible arrière.</string>
+  <string name="spear_action_special_2">Lors de la première attaque, le bouclier perd un point de vie. La cible arrière n\'a rien.</string>
+  <string name="spear_action_special_3">Lors de la deuxième attaque, le bouclier perd son deuxième point de vie et est détruit.
+  Cependant, la cible arrière n'a toujours rien. Il faudrait un troisième coup pour venir à bout d'elle.</string>
+  <string name="queen_move">La reine est capable de se déplacer sur l\'une de ses cases adjacentes, mais aussi en diagonale (une case de portée).</string>
+  <string name="queen_action">La reine n\'attaque qu\'en diagonale, avec une case de portée.</string>
+  <string name="king_move">Le Roi peut se déplacer sur l\'une de ses cases adjacentes.</string>
+  <string name="king_action">Le Roi peut attaquer sur l\'une de ses cases adjacentes, mais aussi en diagonale (une case de portée).</string>
+
 </resources>

@@ -26,5 +26,7 @@ public class Shield extends Piece {
 
   public void initMoves(){
     moves.add(new Coords(0, 1));
+    moves.add(new Coords(-1, 0));
+    moves.add(new Coords(1, 0));
   }
 }

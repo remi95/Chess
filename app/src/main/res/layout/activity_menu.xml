@@ -22,7 +22,11 @@
     android:id="@+id/etPlayer1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:inputType="textPersonName"
     android:hint="@string/player_1"
+    android:backgroundTint="@color/beige"
+    android:textColor="@color/beige"
+    android:textCursorDrawable="@color/beige"
     android:layout_marginBottom="20dp"
     />
 
@@ -30,16 +34,29 @@
     android:id="@+id/etPlayer2"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:inputType="textPersonName"
     android:hint="@string/player_2"
+    android:backgroundTint="@color/beige"
+    android:textColor="@color/beige"
+    android:textCursorDrawable="@color/beige"
     android:layout_marginBottom="50dp"
     />
 
   <Button
     android:id="@+id/btnTwoPlayers"
-    android:layout_width="wrap_content"
+    android:layout_width="200dp"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
+    android:theme="@style/PrimaryButton"
     android:text="@string/two_players"
+    />
+
+  <Button
+    android:id="@+id/btnTuto"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:text="@string/tuto"
     />
 
 </LinearLayout>

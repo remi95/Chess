@@ -26,10 +26,14 @@ public class King extends Piece {
   }
 
   public void initMoves(){
+    moves.add(new Coords(-1, 1));
     moves.add(new Coords(0, 1));
-    moves.add(new Coords(0, -1));
+    moves.add(new Coords(1, 1));
     moves.add(new Coords(-1, 0));
     moves.add(new Coords(1, 0));
+    moves.add(new Coords(-1, -1));
+    moves.add(new Coords(0, -1));
+    moves.add(new Coords(1, -1));
   }
 
   public void initActions(){

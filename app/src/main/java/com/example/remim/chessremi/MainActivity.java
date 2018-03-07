@@ -43,11 +43,104 @@ public class MainActivity extends Activity {
   private ArrayList<RelativeLayout> allCases = new ArrayList<>();
   private ArrayList<RelativeLayout> changedCases = new ArrayList<>();
   private RelativeLayout.OnClickListener caseClickListener;
-  private Button btnPause, btnWhiteFinish, btnBlackFinish;
-  private Button.OnClickListener finishClickListener, optionsClickListener;
+  private Button btnPause, btnWhiteFinish, btnBlackFinish, btnBlackCancel, btnWhiteCancel;
+  private Button.OnClickListener finishClickListener, optionsClickListener, cancelClickListener;
   private RelativeLayout lastClickedCase;
-  private boolean pieceRight, pieceLeft, isWhiteTurn, hasMoved;
+  private boolean pieceRight, pieceLeft, isWhiteTurn, hasMoved, isCancellable;
   private Piece playerInMove;
+  private int lastPosition, currentPosition;
+
+  public void caseClickListener(){
+    caseClickListener = new RelativeLayout.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+
+//        GET CLICKED CASE
+        RelativeLayout clickedCase = (RelativeLayout) v;
+
+//        MOVE OR ACTION ?
+        for (RelativeLayout eachCase : changedCases){
+          if (clickedCase.equals(eachCase)){
+            if (clickedCase.getChildCount() == 0) {
+              move(lastClickedCase, clickedCase);
+              break;
+            }
+            else {
+              action(clickedCase);
+              return;
+            }
+          }
+        }
+
+//        RESET CASES COLORS
+        resetCasesColors();
+        changedCases.clear();
+
+//        GET PIECE AND CALL MOVES AND ACTIONS FUNCTIONS
+        if (clickedCase.getChildCount() > 0){
+          ImageView ivImg = (ImageView) clickedCase.getChildAt(0);
+          Piece piece = (Piece) ivImg.getTag();
+          PlayerColor color = piece.getColor();
+
+          if ((isWhiteTurn && color == PlayerColor.White) || (!isWhiteTurn && color == PlayerColor.Black)) {
+            lastClickedCase = clickedCase;
+            int numCase = glBoard.indexOfChild(clickedCase);
+
+            piecePlacement(numCase);
+
+            if (!hasMoved)
+              showMoves(piece, numCase);
+            showActions(piece, numCase);
+          }
+
+          if (hasMoved && changedCases.isEmpty() && piece == playerInMove)
+            changeTurn();
+        }
+      }
+    };
+  }
+
+  public void btnFinishClickListener(){
+    finishClickListener = new Button.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Button clickedBtn = (Button) v;
+        if ((clickedBtn == btnWhiteFinish && isWhiteTurn) || (clickedBtn == btnBlackFinish && !isWhiteTurn)) {
+          if (hasMoved)
+            changeTurn();
+          else
+            Toast.makeText(context, "Vous devez obligatoirement déplacer un pion", Toast.LENGTH_SHORT).show();
+        }
+      }
+    };
+  }
+
+  public void btnOptionsClickListener(){
+    optionsClickListener = new Button.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        openPopup("Pause");
+      }
+    };
+  }
+
+  public void btnCancelClickListener() {
+    cancelClickListener = new Button.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Button clickedBtn = (Button) v;
+        if (isCancellable) {
+          RelativeLayout currentCase = (RelativeLayout) glBoard.getChildAt(currentPosition);
+          RelativeLayout targetCase = (RelativeLayout) glBoard.getChildAt(lastPosition);
+          move(currentCase, targetCase);
+          resetCasesColors();
+          changedCases.clear();
+          btnWhiteCancel.setEnabled(false);
+          btnBlackCancel.setEnabled(false);
+        }
+      }
+    };
+  }
 
   public void initPions(){
 //    BLACK PIONS
@@ -87,30 +180,6 @@ public class MainActivity extends Activity {
     whiteQueen = new Queen(PlayerColor.White);
   }
 
-  public void posPieces(Piece piece, int xPos, int yPos){
-//    TRANSLATE DP UNITS TO PX
-    int padding_dp = 10;
-    final float scale = getResources().getDisplayMetrics().density;
-    int padding_px = (int) (padding_dp * scale + 0.5f);
-
-//    IMAGE PARAMETERS
-    ImageView img = new ImageView(this);
-    img.setPadding(padding_px, padding_px, padding_px, padding_px);
-    img.setScaleType(ImageView.ScaleType.FIT_CENTER);
-    img.setAdjustViewBounds(true);
-    img.setImageResource(piece.getImg());
-    img.setTag(piece);
-
-    RelativeLayout.LayoutParams lpImg = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
-    lpImg.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
-    img.setLayoutParams(lpImg);
-
-//    IMAGE POSITION
-    int numCase = (yPos * 8) + xPos;
-    RelativeLayout targetCase = (RelativeLayout) glBoard.getChildAt(numCase);
-    targetCase.addView(img);
-  }
-
   public void initComponents(){
     rlContent = findViewById(R.id.glContent);
     glBoard = findViewById(R.id.glBoard);
@@ -135,9 +204,13 @@ public class MainActivity extends Activity {
     btnPause = findViewById(R.id.btnPause);
     btnWhiteFinish = findViewById(R.id.btnWhiteFinish);
     btnBlackFinish = findViewById(R.id.btnBlackFinish);
+    btnBlackCancel = findViewById(R.id.btnBlackCancel);
+    btnWhiteCancel = findViewById(R.id.btnWhiteCancel);
 
     btnWhiteFinish.setOnClickListener(finishClickListener);
     btnBlackFinish.setOnClickListener(finishClickListener);
+    btnBlackCancel.setOnClickListener(cancelClickListener);
+    btnWhiteCancel.setOnClickListener(cancelClickListener);
     btnPause.setOnClickListener(optionsClickListener);
 
     Intent intent = getIntent();
@@ -152,6 +225,9 @@ public class MainActivity extends Activity {
 
     tvWhitePlayer.setText(player1);
     tvBlackPlayer.setText(player2);
+
+    btnWhiteCancel.setEnabled(false);
+    btnBlackCancel.setEnabled(false);
 
 //    glBoard.setOnClickListener(clickListener);
 
@@ -192,124 +268,33 @@ public class MainActivity extends Activity {
 
     isWhiteTurn = true;
     hasMoved = false;
+    isCancellable = false;
+    lastPosition = 0;
+    currentPosition = 0;
   }
 
-  public void btnFinishClickListener(){
-    finishClickListener = new Button.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        Button clickedBtn = (Button) v;
-        if ((clickedBtn == btnWhiteFinish && isWhiteTurn) || (clickedBtn == btnBlackFinish && !isWhiteTurn)) {
-          if (hasMoved)
-            changeTurn();
-          else
-            Toast.makeText(context, "Vous devez obligatoirement déplacer un pion", Toast.LENGTH_SHORT).show();
-        }
-      }
-    };
-  }
+  public void posPieces(Piece piece, int xPos, int yPos){
+//    TRANSLATE DP UNITS TO PX
+    int padding_dp = 10;
+    final float scale = getResources().getDisplayMetrics().density;
+    int padding_px = (int) (padding_dp * scale + 0.5f);
 
-  public void btnOptionsClickListener(){
-    optionsClickListener = new Button.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        openPopup("Pause");
-      }
-    };
-  }
+//    IMAGE PARAMETERS
+    ImageView img = new ImageView(this);
+    img.setPadding(padding_px, padding_px, padding_px, padding_px);
+    img.setScaleType(ImageView.ScaleType.FIT_CENTER);
+    img.setAdjustViewBounds(true);
+    img.setImageResource(piece.getImg());
+    img.setTag(piece);
 
-  public void openPopup(String message){
-    LayoutInflater inflater = (LayoutInflater) context.getSystemService(LAYOUT_INFLATER_SERVICE);
-    final View popupView = inflater.inflate(R.layout.popup_options,null);
-    final PopupWindow optionsPopupWindow = new PopupWindow(
-      popupView,
-      LinearLayout.LayoutParams.WRAP_CONTENT,
-      LinearLayout.LayoutParams.WRAP_CONTENT
-    );
+    RelativeLayout.LayoutParams lpImg = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
+    lpImg.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
+    img.setLayoutParams(lpImg);
 
-    Button btnClose = popupView.findViewById(R.id.btnClose);
-    Button btnRestart = popupView.findViewById(R.id.btnRestart);
-    Button btnExit = popupView.findViewById(R.id.btnExit);
-    TextView tvMessage = popupView.findViewById(R.id.tvMessage);
-
-    tvMessage.setText(message);
-
-    btnClose.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-        optionsPopupWindow.dismiss();
-      }
-    });
-
-    btnRestart.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-        Intent intent = getIntent();
-        startActivity(intent);
-        finish();
-      }
-    });
-
-    btnExit.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-        goToMenu();
-      }
-    });
-
-    optionsPopupWindow.showAtLocation(rlContent, Gravity.CENTER,0,0);
-  }
-
-  public void goToMenu(){
-    Intent intentStart = new Intent(this, MenuActivity.class);
-    startActivity(intentStart);
-    finish();
-  }
-
-  public void caseClickListener(){
-    caseClickListener = new RelativeLayout.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-
-//        GET CLICKED CASE
-        RelativeLayout clickedCase = (RelativeLayout) v;
-
-//        MOVE OR ACTION ?
-        for (RelativeLayout eachCase : changedCases){
-          if (clickedCase.equals(eachCase)){
-            if (clickedCase.getChildCount() == 0)
-              move(clickedCase);
-            else
-              action(clickedCase);
-          }
-        }
-
-//        RESET CASES COLORS
-        resetCasesColors();
-        changedCases.clear();
-
-//        GET PIECE AND CALL MOVES AND ACTIONS FUNCTIONS
-        if (clickedCase.getChildCount() > 0){
-          ImageView ivImg = (ImageView) clickedCase.getChildAt(0);
-          Piece piece = (Piece) ivImg.getTag();
-          PlayerColor color = piece.getColor();
-
-          if ((isWhiteTurn && color == PlayerColor.White) || (!isWhiteTurn && color == PlayerColor.Black)) {
-            lastClickedCase = clickedCase;
-            int numCase = glBoard.indexOfChild(clickedCase);
-
-            piecePlacement(numCase);
-
-            if (!hasMoved)
-              showMoves(piece, numCase);
-            showActions(piece, numCase);
-          }
-
-          if (hasMoved && changedCases.isEmpty() && piece == playerInMove)
-            changeTurn();
-        }
-      }
-    };
+//    IMAGE POSITION
+    int numCase = (yPos * 8) + xPos;
+    RelativeLayout targetCase = (RelativeLayout) glBoard.getChildAt(numCase);
+    targetCase.addView(img);
   }
 
   public void piecePlacement(int numCase){
@@ -401,13 +386,16 @@ public class MainActivity extends Activity {
     return fakeCase;
   }
 
-  public void move(RelativeLayout clickedCase){
-    ImageView targetPiece = (ImageView) lastClickedCase.getChildAt(0);
+  public void move(RelativeLayout caseToLeave, RelativeLayout targetCase){
+    ImageView targetPiece = (ImageView) caseToLeave.getChildAt(0);
     Piece piece = (Piece) targetPiece.getTag();
-    lastClickedCase.removeView(targetPiece);
-    clickedCase.addView(targetPiece);
-    hasMoved = true;
+    caseToLeave.removeView(targetPiece);
+    targetCase.addView(targetPiece);
+    hasMoved = !hasMoved;
     playerInMove = piece;
+    toggleCancellable(true);
+    lastPosition = glBoard.indexOfChild(caseToLeave);
+    currentPosition = glBoard.indexOfChild(targetCase);
   }
 
   public void action(RelativeLayout clickedCase){
@@ -442,7 +430,7 @@ public class MainActivity extends Activity {
     else if (targetPiece.getLife() == 1) {
       if (className.equals("Shield")) {
         int brokenShield = color == PlayerColor.Black ? R.drawable.b_broken_shield : R.drawable.w_broken_shield;
-          targetPieceImg.setImageResource(brokenShield);
+        targetPieceImg.setImageResource(brokenShield);
       }
     }
     changeTurn();
@@ -468,8 +456,10 @@ public class MainActivity extends Activity {
           action(otherCaseTouched);
           return true;
         }
-        else
+        else {
           action(otherCaseTouched);
+          changeTurn();
+        }
       }
     }
     return false;
@@ -496,10 +486,20 @@ public class MainActivity extends Activity {
     }
   }
 
+  public void toggleCancellable(boolean toggle) {
+    isCancellable = toggle;
+    if (isWhiteTurn)
+      btnWhiteCancel.setEnabled(toggle);
+    else
+      btnBlackCancel.setEnabled(toggle);
+  }
+
   public void changeTurn(){
     hasMoved = false;
     isWhiteTurn = !isWhiteTurn;
     resetCasesColors();
+    changedCases.clear();
+    toggleCancellable(false);
 
     if (isWhiteTurn) {
       tvWhitePlayer.setBackgroundColor(getResources().getColor(R.color.green));
@@ -520,6 +520,61 @@ public class MainActivity extends Activity {
     openPopup(winner + " a gagné !");
   }
 
+  public void openPopup(String message){
+    LayoutInflater inflater = (LayoutInflater) context.getSystemService(LAYOUT_INFLATER_SERVICE);
+    final View popupView = inflater.inflate(R.layout.popup_options,null);
+    final PopupWindow optionsPopupWindow = new PopupWindow(
+      popupView,
+      LinearLayout.LayoutParams.MATCH_PARENT,
+      LinearLayout.LayoutParams.WRAP_CONTENT
+    );
+
+    Button btnClose = popupView.findViewById(R.id.btnClose);
+    Button btnRestart = popupView.findViewById(R.id.btnRestart);
+    Button btnExit = popupView.findViewById(R.id.btnExit);
+    TextView tvMessage = popupView.findViewById(R.id.tvMessage);
+
+    tvMessage.setText(message);
+
+    btnClose.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        optionsPopupWindow.dismiss();
+      }
+    });
+
+    btnRestart.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        optionsPopupWindow.dismiss();
+        Intent intent = getIntent();
+        startActivity(intent);
+        finish();
+      }
+    });
+
+    btnExit.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        optionsPopupWindow.dismiss();
+        goToMenu();
+      }
+    });
+
+    optionsPopupWindow.showAtLocation(rlContent, Gravity.CENTER,0,0);
+  }
+
+  public void goToMenu(){
+    Intent intentStart = new Intent(this, MenuActivity.class);
+    startActivity(intentStart);
+    finish();
+  }
+
+  @Override
+  public void onBackPressed() {
+    openPopup("Etes-vous sûr de vouloir quitter ?");
+  }
+
   @Override
   protected void onCreate(Bundle savedInstanceState){
     super.onCreate(savedInstanceState);
@@ -530,41 +585,9 @@ public class MainActivity extends Activity {
 
     caseClickListener();
     btnFinishClickListener();
+    btnCancelClickListener();
     btnOptionsClickListener();
     initPions();
     initComponents();
-  }
-
-  @Override
-  protected void onStart(){
-    super.onStart();
-    Log.d("lifecycle","onStart invoked");
-  }
-
-  @Override
-  public void onResume(){
-    super.onResume();
-    Log.d("lifecycle","onResume invoked");
-  }
-
-  @Override
-  protected void onPause() {
-    super.onPause();
-    Log.d("lifecycle","onPause invoked");
-  }
-  @Override
-  protected void onStop() {
-    super.onStop();
-    Log.d("lifecycle","onStop invoked");
-  }
-  @Override
-  protected void onRestart() {
-    super.onRestart();
-    Log.d("lifecycle","onRestart invoked");
-  }
-  @Override
-  protected void onDestroy() {
-    super.onDestroy();
-    Log.d("lifecycle","onDestroy invoked");
   }
 }

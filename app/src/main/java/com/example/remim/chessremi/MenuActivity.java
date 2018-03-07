@@ -13,11 +13,12 @@ import android.widget.EditText;
 
 public class MenuActivity extends AppCompatActivity {
 
-  private Button btnTwoPlayers;
+  private Button btnTwoPlayers, btnTuto;
   private EditText etPlayer1, etPlayer2;
 
   public void initComponents(){
     btnTwoPlayers = findViewById(R.id.btnTwoPlayers);
+    btnTuto = findViewById(R.id.btnTuto);
     etPlayer1 = findViewById(R.id.etPlayer1);
     etPlayer2 = findViewById(R.id.etPlayer2);
 
@@ -25,6 +26,12 @@ public class MenuActivity extends AppCompatActivity {
       @Override
       public void onClick(View view) {
         goToChessboard();
+      }
+    });
+    btnTuto.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        goToTuto();
       }
     });
   }
@@ -35,6 +42,12 @@ public class MenuActivity extends AppCompatActivity {
     String player2 = etPlayer2.getText().toString();
     intentStart.putExtra("player1", player1);
     intentStart.putExtra("player2", player2);
+    startActivity(intentStart);
+    finish();
+  }
+
+  public void goToTuto(){
+    Intent intentStart = new Intent(this, TutoActivity.class);
     startActivity(intentStart);
     finish();
   }
