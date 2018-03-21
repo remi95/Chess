@@ -1,20 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:orientation="vertical"
-  android:background="@color/brown"
+  android:background="@color/white"
   android:padding="25dp">
 
+  <ImageButton
+    android:id="@+id/settings"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:background="@color/white"
+    android:src="@drawable/settings"
+    android:scaleType="fitCenter"
+    android:layout_alignParentRight="true"
+    />
+
   <TextView
+    android:id="@+id/home_title"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="@string/app_name"
-    android:textColor="@color/white"
+    android:textColor="@color/darkblue"
     android:textSize="50dp"
     android:textAlignment="center"
-    android:layout_marginTop="20dp"
+    android:layout_marginTop="60dp"
     android:layout_marginBottom="40dp"
     />
 
@@ -22,11 +33,12 @@
     android:id="@+id/etPlayer1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_below="@+id/home_title"
     android:inputType="textPersonName"
     android:hint="@string/player_1"
-    android:backgroundTint="@color/beige"
-    android:textColor="@color/beige"
-    android:textCursorDrawable="@color/beige"
+    android:backgroundTint="@color/darkblue"
+    android:textColor="@color/darkblue"
+    android:textCursorDrawable="@color/darkblue"
     android:layout_marginBottom="20dp"
     />
 
@@ -34,29 +46,77 @@
     android:id="@+id/etPlayer2"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_below="@+id/etPlayer1"
     android:inputType="textPersonName"
     android:hint="@string/player_2"
-    android:backgroundTint="@color/beige"
-    android:textColor="@color/beige"
-    android:textCursorDrawable="@color/beige"
+    android:backgroundTint="@color/darkblue"
+    android:textColor="@color/darkblue"
+    android:textCursorDrawable="@color/darkblue"
     android:layout_marginBottom="50dp"
     />
 
-  <Button
-    android:id="@+id/btnTwoPlayers"
-    android:layout_width="200dp"
+  <LinearLayout
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:theme="@style/PrimaryButton"
-    android:text="@string/two_players"
-    />
+    android:orientation="vertical"
+    android:layout_below="@+id/etPlayer2">
 
-  <Button
-    android:id="@+id/btnTuto"
-    android:layout_width="200dp"
+    <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center">
+
+      <Button
+        android:id="@+id/btnTwoPlayers"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:theme="@style/DarkblueButton"
+        android:text="@string/two_players"
+        />
+
+      <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/two_players"
+        android:adjustViewBounds="true"
+        android:scaleType="center"
+        />
+    </RelativeLayout>
+
+    <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center">
+
+      <Button
+        android:id="@+id/btnTuto"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:theme="@style/GrayblueButton"
+        android:text="@string/tuto"
+        />
+
+      <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/tutorial"
+        android:adjustViewBounds="true"
+        android:scaleType="center"
+        />
+    </RelativeLayout>
+  </LinearLayout>
+
+  <TextView
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:text="@string/tuto"
-    />
+    android:text="@string/developper"
+    android:textColor="@color/grayblue"
+    android:textAlignment="center"
+    android:layout_alignParentBottom="true"/>
 
-</LinearLayout>
+
+</RelativeLayout>

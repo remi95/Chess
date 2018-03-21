@@ -3,9 +3,9 @@
   <!-- Base application theme. -->
   <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
     <!-- Customize your theme here. -->
-    <item name="colorPrimary">@color/colorPrimary</item>
-    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-    <item name="colorAccent">@color/colorAccent</item>
+    <item name="colorPrimary">@color/darkblue</item>
+    <item name="colorPrimaryDark">@color/darkblue</item>
+    <item name="colorAccent">@color/darkblue</item>
   </style>
 
   <style name="AppTheme.NoActionBar">
@@ -13,13 +13,25 @@
     <item name="windowNoTitle">true</item>
   </style>
 
-  <style name="PrimaryButton" parent="Theme.AppCompat">
-    <item name="colorButtonNormal">@color/colorPrimary</item>
-    <item name="colorControlHighlight">@color/colorAccent</item>
-  </style>
-
   <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
   <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+  <style name="DarkblueButton" parent="Theme.AppCompat">
+    <item name="colorButtonNormal">@color/darkblue</item>
+    <item name="colorControlHighlight">@color/grayblue</item>
+  </style>
+
+  <style name="GrayblueButton" parent="Theme.AppCompat">
+    <item name="colorButtonNormal">@color/grayblue</item>
+    <item name="colorControlHighlight">@color/lightblue</item>
+  </style>
+
+  <style name="RedButton" parent="Theme.AppCompat">
+    <item name="colorButtonNormal">@color/red</item>
+    <item name="colorControlHighlight">@color/redlight</item>
+  </style>
+
 
 </resources>

@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -30,16 +31,10 @@ class TutoPagerAdapter extends PagerAdapter {
     TextView pieceName = tutoView.findViewById(R.id.piece_name);
     ImageView image = tutoView.findViewById(R.id.tuto_img);
     TextView description = tutoView.findViewById(R.id.tuto_description);
-    TextView pageNumber = tutoView.findViewById(R.id.page_number);
-
-    String currentPage = String.valueOf(position + 1);
-    String totalPages = String.valueOf(this.getCount());
-    String pagenumberText = currentPage + "/" + totalPages;
 
     pieceName.setText(tuto.getPiece());
     image.setImageResource(tuto.getImage());
     description.setText(tuto.getDescription());
-    pageNumber.setText(pagenumberText);
 
     container.addView(tutoView);
 

@@ -5,8 +5,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingTop="20dp"
-    android:paddingLeft="50dp"
-    android:paddingRight="50dp"
     android:paddingBottom="20dp"
     android:background="@color/white">
 
@@ -16,12 +14,13 @@
     android:layout_height="wrap_content"
     android:textAlignment="center"
     android:textSize="40sp"
+    android:textColor="@color/darkblue"
     />
 
   <ImageView
     android:id="@+id/tuto_img"
     android:layout_width="match_parent"
-    android:layout_height="180dp"
+    android:layout_height="150dp"
     android:layout_margin="30dp"
     android:layout_below="@+id/piece_name"
     />
@@ -29,26 +28,14 @@
   <TextView
     android:id="@+id/tuto_description"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:textAlignment="center"
+    android:layout_height="180dp"
     android:layout_below="@+id/tuto_img"
-    />
-
-  <ImageView
-    android:layout_width="wrap_content"
-    android:layout_height="50dp"
-    android:layout_above="@+id/page_number"
-    android:layout_centerInParent="true"
-    android:layout_marginBottom="20dp"
-    android:src="@drawable/swipe"
-    />
-
-  <TextView
-    android:id="@+id/page_number"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@color/lightblue"
     android:textAlignment="center"
-    android:layout_alignParentBottom="true"
+    android:textColor="@color/darkblue"
+    android:paddingRight="50dp"
+    android:paddingLeft="50dp"
     />
 
 </RelativeLayout>

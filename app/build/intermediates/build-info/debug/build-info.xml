@@ -2,39 +2,77 @@
 <instant-run
     abi="x86,armeabi-v7a,armeabi"
     api-level="21"
-    build-mode="COLD"
+    build-mode="HOT_WARM"
     density="xxhdpi"
     format="10"
-    ir-eligibility="METHOD_ADDED"
     plugin-version="3.0.0"
-    timestamp="1520455500579"
+    timestamp="1521647437769"
     token="465864674651014965"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="317" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="39" />
+        duration="0" />
     <task
         name="verifier"
-        duration="14" />
+        duration="0" />
 
     <artifact
-        location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\outputs\apk\debug\app-debug.apk"
-        type="SPLIT_MAIN" />
+        location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+        type="RESOURCES" />
 
     <build
         build-mode="FULL"
-        timestamp="1520453758425"
+        timestamp="1521645297183"
         verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\outputs\apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="R_CLASS_CHANGE"
+        timestamp="1521646455211"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
@@ -53,45 +91,22 @@
         <artifact
             location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
-        <artifact
-            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\outputs\apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
-        <artifact
-            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-            type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1520455212192"
+        timestamp="1521647205414"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\outputs\apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
-        build-mode="COLD"
-        ir-eligibility="METHOD_ADDED"
-        timestamp="1520455500579"
-        verifier="COLD_SWAP_REQUESTED" >
+        build-mode="HOT_WARM"
+        timestamp="1521647437769"
+        verifier="COMPATIBLE" >
         <artifact
-            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\outputs\apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
+            location="C:\Users\remim\AndroidStudioProjects\Chess\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>

@@ -4,68 +4,84 @@
   android:id="@+id/glContent"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:background="@color/darkBrown">
+  android:background="@color/lightblue">
 
-  <LinearLayout
+  <RelativeLayout
     android:id="@+id/llBlack"
     android:layout_width="match_parent"
-    android:layout_height="40dp"
+    android:layout_height="50dp"
     android:orientation="horizontal"
-    android:layout_alignParentTop="true">
+    android:layout_alignParentTop="true"
+    android:background="@color/darkblue"
+    android:padding="13dp">
 
-    <Button
+    <ImageButton
       android:id="@+id/btnBlackFinish"
       android:layout_width="wrap_content"
       android:layout_height="match_parent"
-      android:layout_gravity="start"
-      android:text="@string/finish"
-      android:textColor="@color/white"
-      android:textAllCaps="false"
-      android:background="@android:color/holo_red_dark"
-      />
-
-    <Button
-      android:id="@+id/btnBlackCancel"
-      android:layout_width="wrap_content"
-      android:layout_height="match_parent"
-      android:layout_gravity="start"
-      android:text="@string/cancel"
-      android:textColor="@color/white"
-      android:textAllCaps="false"
-      android:background="@android:color/holo_orange_dark"
+      android:layout_alignParentStart="true"
+      android:background="@color/darkblue"
+      android:src="@drawable/finish"
+      android:adjustViewBounds="true"
+      android:scaleType="fitCenter"
+      android:rotation="180"
       />
 
     <TextView
       android:id="@+id/tvBlackPlayer"
-      android:layout_width="0dp"
-      android:layout_height="match_parent"
-      android:text="@string/player_2"
-      android:gravity="center"
-      android:textAlignment="center"
-      android:layout_weight="1"
-      android:textColor="@android:color/white"
-      />
-    <Button
-      android:id="@+id/btnPause"
       android:layout_width="wrap_content"
       android:layout_height="match_parent"
-      android:layout_gravity="start"
-      android:text="X"
+      android:layout_centerInParent="true"
+      android:text="@string/player_2"
+      android:textSize="18sp"
+      android:textAlignment="center"
       android:textColor="@color/white"
-      android:background="@android:color/holo_red_dark"
       />
 
-  </LinearLayout>
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:orientation="horizontal"
+      android:layout_alignParentEnd="true">
 
-  <TableRow
+      <ImageButton
+        android:id="@+id/btnBlackCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/darkblue"
+        android:src="@drawable/cancel"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:rotation="180"
+        android:layout_marginEnd="30dp"
+        />
+
+      <ImageButton
+        android:id="@+id/btnPause"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/darkblue"
+        android:src="@drawable/pause"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        />
+    </LinearLayout>
+  </RelativeLayout>
+
+  <LinearLayout
     android:id="@+id/trBlack"
     android:layout_width="match_parent"
-    android:layout_height="40dp"
+    android:layout_height="50dp"
     android:layout_below="@id/llBlack"
+    android:background="@color/grayblue"
     android:gravity="center"
-    android:weightSum="14"
-    android:layout_marginTop="15dp">
+    android:paddingTop="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    >
     <ImageView
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:scaleType="fitCenter"
       android:adjustViewBounds="true"
       android:src="@drawable/b_shield"
@@ -74,12 +90,16 @@
       />
     <TextView
       android:id="@+id/tvBlackShield"
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:text="@string/nb_pieces_4"
-      android:textColor="@color/gray"
+      android:textColor="@color/white"
       android:gravity="center"
       android:layout_weight="1"
       />
     <ImageView
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:scaleType="fitCenter"
       android:adjustViewBounds="true"
       android:src="@drawable/b_sword"
@@ -88,12 +108,16 @@
       />
     <TextView
       android:id="@+id/tvBlackSword"
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:text="@string/nb_pieces_4"
-      android:textColor="@color/gray"
+      android:textColor="@color/white"
       android:gravity="center"
       android:layout_weight="1"
       />
     <ImageView
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:scaleType="fitCenter"
       android:adjustViewBounds="true"
       android:src="@drawable/b_bow"
@@ -102,12 +126,16 @@
       />
     <TextView
       android:id="@+id/tvBlackBow"
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:text="@string/nb_pieces_2"
-      android:textColor="@color/gray"
+      android:textColor="@color/white"
       android:gravity="center"
       android:layout_weight="1"
       />
     <ImageView
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:scaleType="fitCenter"
       android:adjustViewBounds="true"
       android:src="@drawable/b_spear"
@@ -116,12 +144,16 @@
       />
     <TextView
       android:id="@+id/tvBlackSpear"
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:text="@string/nb_pieces_2"
-      android:textColor="@color/gray"
+      android:textColor="@color/white"
       android:gravity="center"
       android:layout_weight="1"
       />
     <ImageView
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:scaleType="fitCenter"
       android:adjustViewBounds="true"
       android:src="@drawable/b_catapult"
@@ -130,12 +162,16 @@
       />
     <TextView
       android:id="@+id/tvBlackCatapult"
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:text="@string/nb_pieces_2"
-      android:textColor="@color/gray"
+      android:textColor="@color/white"
       android:gravity="center"
       android:layout_weight="1"
       />
     <ImageView
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:scaleType="fitCenter"
       android:adjustViewBounds="true"
       android:src="@drawable/b_king"
@@ -144,12 +180,16 @@
       />
     <TextView
       android:id="@+id/tvBlackKing"
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:text="@string/nb_pieces_1"
-      android:textColor="@color/gray"
+      android:textColor="@color/white"
       android:gravity="center"
       android:layout_weight="1"
       />
     <ImageView
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:scaleType="fitCenter"
       android:adjustViewBounds="true"
       android:src="@drawable/b_queen"
@@ -158,12 +198,23 @@
       />
     <TextView
       android:id="@+id/tvBlackQueen"
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:text="@string/nb_pieces_1"
-      android:textColor="@color/gray"
+      android:textColor="@color/white"
       android:gravity="center"
       android:layout_weight="1"
       />
-  </TableRow>
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/playerIndicatorBlack"
+    android:layout_width="match_parent"
+    android:layout_height="5dp"
+    android:orientation="horizontal"
+    android:layout_below="@+id/llBlack"
+    android:background="@color/grayblue"
+    />
 
   <GridLayout
     android:id="@+id/glBoard"
@@ -561,15 +612,20 @@
       android:background="@color/brown"/>
   </GridLayout>
 
-  <TableRow
+  <LinearLayout
     android:id="@+id/trWhite"
     android:layout_width="match_parent"
-    android:layout_height="40dp"
+    android:layout_height="50dp"
     android:layout_above="@id/llWhite"
+    android:background="@color/grayblue"
     android:gravity="center"
-    android:weightSum="14"
-    android:layout_marginBottom="15dp">
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    >
     <ImageView
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:scaleType="fitCenter"
       android:adjustViewBounds="true"
       android:src="@drawable/w_shield"
@@ -578,12 +634,16 @@
       />
     <TextView
       android:id="@+id/tvWhiteShield"
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:text="@string/nb_pieces_4"
-      android:textColor="@color/gray"
+      android:textColor="@color/white"
       android:gravity="center"
       android:layout_weight="1"
       />
     <ImageView
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:scaleType="fitCenter"
       android:adjustViewBounds="true"
       android:src="@drawable/w_sword"
@@ -592,12 +652,16 @@
       />
     <TextView
       android:id="@+id/tvWhiteSword"
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:text="@string/nb_pieces_4"
-      android:textColor="@color/gray"
+      android:textColor="@color/white"
       android:gravity="center"
       android:layout_weight="1"
       />
     <ImageView
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:scaleType="fitCenter"
       android:adjustViewBounds="true"
       android:src="@drawable/w_bow"
@@ -606,12 +670,16 @@
       />
     <TextView
       android:id="@+id/tvWhiteBow"
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:text="@string/nb_pieces_2"
-      android:textColor="@color/gray"
+      android:textColor="@color/white"
       android:gravity="center"
       android:layout_weight="1"
       />
     <ImageView
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:scaleType="fitCenter"
       android:adjustViewBounds="true"
       android:src="@drawable/w_spear"
@@ -620,12 +688,16 @@
       />
     <TextView
       android:id="@+id/tvWhiteSpear"
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:text="@string/nb_pieces_2"
-      android:textColor="@color/gray"
+      android:textColor="@color/white"
       android:gravity="center"
       android:layout_weight="1"
       />
     <ImageView
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:scaleType="fitCenter"
       android:adjustViewBounds="true"
       android:src="@drawable/w_catapult"
@@ -634,12 +706,16 @@
       />
     <TextView
       android:id="@+id/tvWhiteCatapult"
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:text="@string/nb_pieces_2"
-      android:textColor="@color/gray"
+      android:textColor="@color/white"
       android:gravity="center"
       android:layout_weight="1"
       />
     <ImageView
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:scaleType="fitCenter"
       android:adjustViewBounds="true"
       android:src="@drawable/w_king"
@@ -648,12 +724,16 @@
       />
     <TextView
       android:id="@+id/tvWhiteKing"
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:text="@string/nb_pieces_1"
-      android:textColor="@color/gray"
+      android:textColor="@color/white"
       android:gravity="center"
       android:layout_weight="1"
       />
     <ImageView
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:scaleType="fitCenter"
       android:adjustViewBounds="true"
       android:src="@drawable/w_queen"
@@ -662,53 +742,64 @@
       />
     <TextView
       android:id="@+id/tvWhiteQueen"
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
       android:text="@string/nb_pieces_1"
-      android:textColor="@color/gray"
+      android:textColor="@color/white"
       android:gravity="center"
       android:layout_weight="1"
       />
-  </TableRow>
+  </LinearLayout>
 
   <LinearLayout
-    android:id="@+id/llWhite"
-    android:layout_height="40dp"
+    android:id="@+id/playerIndicatorWhite"
     android:layout_width="match_parent"
+    android:layout_height="5dp"
     android:orientation="horizontal"
+    android:layout_above="@id/llWhite"
+    android:background="@color/green"
+    />
+
+  <RelativeLayout
+    android:id="@+id/llWhite"
+    android:layout_height="50dp"
+    android:layout_width="match_parent"
     android:layout_alignParentBottom="true"
+    android:background="@color/darkblue"
+    android:padding="13dp"
     >
 
     <TextView
       android:id="@+id/tvWhitePlayer"
-      android:layout_width="0dp"
+      android:layout_width="wrap_content"
       android:layout_height="match_parent"
+      android:layout_centerInParent="true"
       android:text="@string/player_1"
-      android:gravity="center"
-      android:layout_weight="1"
       android:textAlignment="center"
+      android:textSize="18sp"
       android:textColor="@android:color/white"
-      android:background="@color/green"
       />
 
-    <Button
+    <ImageButton
       android:id="@+id/btnWhiteCancel"
       android:layout_width="wrap_content"
       android:layout_height="match_parent"
-      android:layout_gravity="start"
-      android:text="@string/cancel"
-      android:textColor="@color/white"
-      android:textAllCaps="false"
-      android:background="@android:color/holo_orange_dark"
+      android:layout_alignParentStart="true"
+      android:background="@color/darkblue"
+      android:src="@drawable/cancel"
+      android:adjustViewBounds="true"
+      android:scaleType="fitCenter"
       />
 
-    <Button
+    <ImageButton
       android:id="@+id/btnWhiteFinish"
       android:layout_width="wrap_content"
       android:layout_height="match_parent"
-      android:layout_gravity="start"
-      android:text="@string/finish"
-      android:textAllCaps="false"
-      android:textColor="@color/white"
-      android:background="@android:color/holo_red_dark"
+      android:layout_alignParentEnd="true"
+      android:background="@color/darkblue"
+      android:src="@drawable/finish"
+      android:adjustViewBounds="true"
+      android:scaleType="fitCenter"
       />
-  </LinearLayout>
+  </RelativeLayout>
 </RelativeLayout>

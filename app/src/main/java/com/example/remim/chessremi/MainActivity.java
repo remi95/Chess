@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridLayout;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
@@ -29,6 +30,7 @@ public class MainActivity extends Activity {
   private Context context;
   private RelativeLayout rlContent;
   private GridLayout glBoard;
+  private LinearLayout playerIndicatorWhite, playerIndicatorBlack;
   private String player1, player2;
   private TextView tvBlackPlayer, tvWhitePlayer;
   private Shield blackShield_1, blackShield_2, blackShield_3, blackShield_4,
@@ -43,7 +45,7 @@ public class MainActivity extends Activity {
   private ArrayList<RelativeLayout> allCases = new ArrayList<>();
   private ArrayList<RelativeLayout> changedCases = new ArrayList<>();
   private RelativeLayout.OnClickListener caseClickListener;
-  private Button btnPause, btnWhiteFinish, btnBlackFinish, btnBlackCancel, btnWhiteCancel;
+  private ImageButton btnPause, btnWhiteFinish, btnBlackFinish, btnBlackCancel, btnWhiteCancel;
   private Button.OnClickListener finishClickListener, optionsClickListener, cancelClickListener;
   private RelativeLayout lastClickedCase;
   private boolean pieceRight, pieceLeft, isWhiteTurn, hasMoved, isCancellable;
@@ -104,7 +106,7 @@ public class MainActivity extends Activity {
     finishClickListener = new Button.OnClickListener() {
       @Override
       public void onClick(View v) {
-        Button clickedBtn = (Button) v;
+        ImageButton clickedBtn = (ImageButton) v;
         if ((clickedBtn == btnWhiteFinish && isWhiteTurn) || (clickedBtn == btnBlackFinish && !isWhiteTurn)) {
           if (hasMoved)
             changeTurn();
@@ -128,7 +130,7 @@ public class MainActivity extends Activity {
     cancelClickListener = new Button.OnClickListener() {
       @Override
       public void onClick(View v) {
-        Button clickedBtn = (Button) v;
+        ImageButton clickedBtn = (ImageButton) v;
         if (isCancellable) {
           RelativeLayout currentCase = (RelativeLayout) glBoard.getChildAt(currentPosition);
           RelativeLayout targetCase = (RelativeLayout) glBoard.getChildAt(lastPosition);
@@ -185,6 +187,8 @@ public class MainActivity extends Activity {
     glBoard = findViewById(R.id.glBoard);
     tvBlackPlayer = findViewById(R.id.tvBlackPlayer);
     tvWhitePlayer = findViewById(R.id.tvWhitePlayer);
+    playerIndicatorWhite = findViewById(R.id.playerIndicatorWhite);
+    playerIndicatorBlack = findViewById(R.id.playerIndicatorBlack);
 
     DisplayMetrics metrics = new DisplayMetrics();
     getWindowManager().getDefaultDisplay().getMetrics(metrics);
@@ -502,12 +506,12 @@ public class MainActivity extends Activity {
     toggleCancellable(false);
 
     if (isWhiteTurn) {
-      tvWhitePlayer.setBackgroundColor(getResources().getColor(R.color.green));
-      tvBlackPlayer.setBackgroundColor(getResources().getColor(R.color.darkBrown));
+      playerIndicatorWhite.setBackgroundColor(getResources().getColor(R.color.green));
+      playerIndicatorBlack.setBackgroundColor(getResources().getColor(R.color.grayblue));
     }
     else {
-      tvBlackPlayer.setBackgroundColor(getResources().getColor(R.color.green));
-      tvWhitePlayer.setBackgroundColor(getResources().getColor(R.color.darkBrown));
+      playerIndicatorBlack.setBackgroundColor(getResources().getColor(R.color.green));
+      playerIndicatorWhite.setBackgroundColor(getResources().getColor(R.color.grayblue));
     }
   }
 
@@ -529,7 +533,7 @@ public class MainActivity extends Activity {
       LinearLayout.LayoutParams.WRAP_CONTENT
     );
 
-    Button btnClose = popupView.findViewById(R.id.btnClose);
+    ImageButton btnClose = popupView.findViewById(R.id.btnClose);
     Button btnRestart = popupView.findViewById(R.id.btnRestart);
     Button btnExit = popupView.findViewById(R.id.btnExit);
     TextView tvMessage = popupView.findViewById(R.id.tvMessage);

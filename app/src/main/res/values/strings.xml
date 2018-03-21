@@ -2,6 +2,7 @@
   <string name="app_name">Chess</string>
   <string name="player_1">Joueur Blanc</string>
   <string name="player_2">Joueur Noir</string>
+  <string name="developper">Développé par Rémi Mafat</string>
 
   <string name="nb_pieces_1">1</string>
   <string name="nb_pieces_2">2</string>
@@ -27,7 +28,7 @@
 
   <string name="shield_move">Le bouclier peut bouger d\'une case, mais il ne peut jamais reculer.</string>
   <string name="shield_life">Le bouclier ne peut pas attaquer, mais il est le seul pion à possèder deux points de vie.
-    Il doit donc recevoir deux attaques pour être vaincu. Vous pourrez reconnaître les boucliers déjà touchés grâce à la fissure qu'ils auront.</string>
+    Il doit donc recevoir deux attaques pour être vaincu. Vous pourrez reconnaître les boucliers déjà touchés grâce à la fissure qu\'ils auront.</string>
   <string name="sword_move">L\'épée peut se déplacer sur l\'une de ses cases adjacentes.</string>
   <string name="sword_action">L\'épée peut attaquer sur l\'une de ses cases adjacentes.</string>
   <string name="bow_move">L\'arc se déplace uniquement en diagonale, sur deux cases de portée.</string>

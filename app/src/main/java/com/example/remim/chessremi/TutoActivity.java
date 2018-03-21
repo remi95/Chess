@@ -6,21 +6,48 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class TutoActivity extends AppCompatActivity {
 
   private ArrayList<TutoPage> tutoPages;
-  private Button btnMenu;
+  private ImageButton btnMenu;
+  private TextView pageNumber;
+  private int totalPages;
 
   public void initComponents() {
     btnMenu = findViewById(R.id.btn_menu);
+    pageNumber = findViewById(R.id.page_number);
+
     initTutos();
+
+    totalPages = tutoPages.size();
 
     ViewPager viewPager = findViewById(R.id.vp_tutos);
     TutoPagerAdapter tutoPagerAdapter = new TutoPagerAdapter(this, tutoPages);
     viewPager.setAdapter(tutoPagerAdapter);
+    viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+      @Override
+      public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+      }
+
+      @Override
+      public void onPageSelected(int position) {
+        String currentPage = String.valueOf(position + 1);
+        String pageNumberText = currentPage + "/" + totalPages;
+        pageNumber.setText(pageNumberText);
+      }
+
+      @Override
+      public void onPageScrollStateChanged(int state) {
+
+      }
+    });
 
     btnMenu.setOnClickListener(new View.OnClickListener() {
       @Override
