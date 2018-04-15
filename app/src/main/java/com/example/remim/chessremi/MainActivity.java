@@ -55,6 +55,7 @@ public class MainActivity extends Activity {
   private boolean pieceRight, pieceLeft, isWhiteTurn, hasMoved, isCancellable;
   private Piece playerInMove;
   private int lastPosition, currentPosition;
+  int lightColor, darkColor;
 
   public void caseClickListener(){
     caseClickListener = new RelativeLayout.OnClickListener() {
@@ -194,6 +195,16 @@ public class MainActivity extends Activity {
     playerIndicatorWhite = findViewById(R.id.playerIndicatorWhite);
     playerIndicatorBlack = findViewById(R.id.playerIndicatorBlack);
     SharedPreferences preferences = getApplicationContext().getSharedPreferences("chessSettings", Context.MODE_PRIVATE);
+    String theme = preferences.getString("theme", null);
+
+    if (theme.equals("CUSTOM")){
+      lightColor = R.color.grayblue;
+      darkColor = R.color.darkblue;
+    }
+    else {
+      lightColor = R.color.beige;
+      darkColor = R.color.darkBrown;
+    }
 
     DisplayMetrics metrics = new DisplayMetrics();
     getWindowManager().getDefaultDisplay().getMetrics(metrics);
@@ -208,7 +219,6 @@ public class MainActivity extends Activity {
       rlEachCase.setOnClickListener(caseClickListener);
       rlEachCase.setLayoutParams(glParams);
 
-      String theme = preferences.getString("theme", null);
       if (theme.equals("CUSTOM")) {
         ColorDrawable caseColor = (ColorDrawable) rlEachCase.getBackground();
         int colorId = caseColor.getColor();
@@ -496,15 +506,15 @@ public class MainActivity extends Activity {
       int x = numCase % 8;
       if (y % 2 == 0){
         if (x % 2 == 0)
-          eachCase.setBackgroundColor(getResources().getColor(R.color.brown));
+          eachCase.setBackgroundColor(getResources().getColor(darkColor));
         else
-          eachCase.setBackgroundColor(getResources().getColor(R.color.beige));
+          eachCase.setBackgroundColor(getResources().getColor(lightColor));
       }
       else{
         if (x % 2 == 0)
-          eachCase.setBackgroundColor(getResources().getColor(R.color.beige));
+          eachCase.setBackgroundColor(getResources().getColor(lightColor));
         else
-          eachCase.setBackgroundColor(getResources().getColor(R.color.brown));
+          eachCase.setBackgroundColor(getResources().getColor(darkColor));
       }
     }
   }
