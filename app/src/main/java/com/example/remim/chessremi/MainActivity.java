@@ -3,6 +3,10 @@ package com.example.remim.chessremi;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -189,6 +193,7 @@ public class MainActivity extends Activity {
     tvWhitePlayer = findViewById(R.id.tvWhitePlayer);
     playerIndicatorWhite = findViewById(R.id.playerIndicatorWhite);
     playerIndicatorBlack = findViewById(R.id.playerIndicatorBlack);
+    SharedPreferences preferences = getApplicationContext().getSharedPreferences("chessSettings", Context.MODE_PRIVATE);
 
     DisplayMetrics metrics = new DisplayMetrics();
     getWindowManager().getDefaultDisplay().getMetrics(metrics);
@@ -202,6 +207,17 @@ public class MainActivity extends Activity {
       RelativeLayout rlEachCase = (RelativeLayout) glBoard.getChildAt(i);
       rlEachCase.setOnClickListener(caseClickListener);
       rlEachCase.setLayoutParams(glParams);
+
+      String theme = preferences.getString("theme", null);
+      if (theme.equals("CUSTOM")) {
+        ColorDrawable caseColor = (ColorDrawable) rlEachCase.getBackground();
+        int colorId = caseColor.getColor();
+
+        if (colorId == getApplicationContext().getResources().getColor(R.color.brown))
+          rlEachCase.setBackgroundColor(getResources().getColor(R.color.darkblue));
+        else
+          rlEachCase.setBackgroundColor(getResources().getColor(R.color.grayblue));
+      }
       allCases.add(rlEachCase);
     }
 
@@ -233,7 +249,10 @@ public class MainActivity extends Activity {
     btnWhiteCancel.setEnabled(false);
     btnBlackCancel.setEnabled(false);
 
-//    glBoard.setOnClickListener(clickListener);
+    if (!preferences.getBoolean("backPossibility", true)) {
+      btnBlackCancel.setVisibility(View.GONE);
+      btnWhiteCancel.setVisibility(View.GONE);
+    }
 
 //    PIECES POSITIONS
     posPieces(blackCatapult_1, 0, 0);

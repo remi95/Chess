@@ -18,17 +18,15 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-
     <activity
       android:name=".MainActivity"
       android:screenOrientation="portrait"
       android:theme="@style/AppTheme.NoActionBar" />
-
     <activity
       android:name=".TutoActivity"
       android:screenOrientation="portrait"
       android:theme="@style/AppTheme.NoActionBar" />
-
+    <activity android:name=".SettingActivity"></activity>
   </application>
 
 </manifest>

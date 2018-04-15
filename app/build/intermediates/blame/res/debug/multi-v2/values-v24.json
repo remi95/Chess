@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\cf5be5c12a7ee7bc34a557846fe79997\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\c617108558c56e8f5e9883e6bc5c1223\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\85cde321be168bb9a2fd0786071fda7a\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

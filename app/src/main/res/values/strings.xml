@@ -50,5 +50,11 @@
   <string name="queen_action">La reine n\'attaque qu\'en diagonale, avec une case de portée.</string>
   <string name="king_move">Le Roi peut se déplacer sur l\'une de ses cases adjacentes.</string>
   <string name="king_action">Le Roi peut attaquer sur l\'une de ses cases adjacentes, mais aussi en diagonale (une case de portée).</string>
+  <string name="options">Options</string>
+  <string name="option_back">Autoriser le retour en arrière</string>
+  <string name="option_color_title">Choisir la couleur du plateau</string>
+  <string name="option_color_classic">Thème classique</string>
+  <string name="option_color_custom">Thème personnalisé</string>
+  <string name="save">Sauvegarder</string>
 
 </resources>

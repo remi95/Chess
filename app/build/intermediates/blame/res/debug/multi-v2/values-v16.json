@@ -4,7 +4,17 @@
             "outputFile": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\cf5be5c12a7ee7bc34a557846fe79997\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d8719a469fc0a86dcd483eeccaa0201d\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,16 +30,6 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\3aa1ae318ee4c48df5406eea4a9c5341\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
                     }
                 }
             ]
