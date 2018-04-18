@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_item_background_holo_light.xml.flat",
-        "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\drawable\\abc_item_background_holo_light.xml"
-    },
-    {
         "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_secondary_text_material_dark.xml.flat",
         "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\color\\abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_item_background_holo_light.xml.flat",
+        "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
         "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tooltip_frame_dark.xml.flat",
@@ -32,16 +32,16 @@
         "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
-        "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21_design_bottom_sheet_slide_in.xml.flat",
-        "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\ba6b418517a7da9bedb47fa2cc5dc060\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
+        "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
         "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
-        "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21_design_bottom_sheet_slide_in.xml.flat",
+        "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\ba6b418517a7da9bedb47fa2cc5dc060\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
     },
     {
         "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_alert_dialog_material.xml.flat",
@@ -88,12 +88,12 @@
         "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\ba6b418517a7da9bedb47fa2cc5dc060\\res\\layout\\design_navigation_menu.xml"
     },
     {
-        "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable_b_broken_shield.png.flat",
-        "source": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\src\\main\\res\\drawable\\b_broken_shield.png"
-    },
-    {
         "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_seekbar_track_material.xml.flat",
         "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable_b_broken_shield.png.flat",
+        "source": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\src\\main\\res\\drawable\\b_broken_shield.png"
     },
     {
         "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_go_search_api_material.xml.flat",
@@ -140,12 +140,12 @@
         "source": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\src\\main\\res\\drawable\\spear_action.png"
     },
     {
-        "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_half_black_16dp.png.flat",
-        "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_16dp.png"
-    },
-    {
         "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_avd_show_password.xml.flat",
         "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\ba6b418517a7da9bedb47fa2cc5dc060\\res\\drawable-v21\\avd_show_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_half_black_16dp.png.flat",
+        "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
     {
         "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable_catapult_action.png.flat",
@@ -192,12 +192,12 @@
         "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d8719a469fc0a86dcd483eeccaa0201d\\res\\drawable\\notification_tile_bg.xml"
     },
     {
-        "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\drawable-xhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_media_custom.xml.flat",
         "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\85cde321be168bb9a2fd0786071fda7a\\res\\layout\\notification_template_media_custom.xml"
+    },
+    {
+        "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\drawable-xhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -212,20 +212,20 @@
         "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\drawable-xhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_icon_background.xml.flat",
-        "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d8719a469fc0a86dcd483eeccaa0201d\\res\\drawable\\notification_icon_background.xml"
-    },
-    {
         "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
         "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\drawable-xxxhdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
     },
     {
-        "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_bar_title_item.xml.flat",
-        "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\layout\\abc_action_bar_title_item.xml"
+        "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_icon_background.xml.flat",
+        "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d8719a469fc0a86dcd483eeccaa0201d\\res\\drawable\\notification_icon_background.xml"
     },
     {
         "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\drawable-xxhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_bar_title_item.xml.flat",
+        "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
         "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
@@ -324,12 +324,12 @@
         "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\color\\abc_hint_foreground_material_dark.xml"
     },
     {
-        "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\anim_design_snackbar_in.xml.flat",
-        "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\ba6b418517a7da9bedb47fa2cc5dc060\\res\\anim\\design_snackbar_in.xml"
-    },
-    {
         "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_design_ic_visibility_off.xml.flat",
         "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\ba6b418517a7da9bedb47fa2cc5dc060\\res\\drawable-anydpi-v21\\design_ic_visibility_off.xml"
+    },
+    {
+        "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\anim_design_snackbar_in.xml.flat",
+        "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\ba6b418517a7da9bedb47fa2cc5dc060\\res\\anim\\design_snackbar_in.xml"
     },
     {
         "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\layout_popup_options.xml.flat",
@@ -820,6 +820,10 @@
         "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\drawable-hdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
     },
     {
+        "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
         "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\drawable-hdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
@@ -1136,6 +1140,10 @@
         "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\drawable-xxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
+        "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
         "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_list_menu_item_icon.xml.flat",
         "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\layout\\abc_list_menu_item_icon.xml"
     },
@@ -1294,6 +1302,10 @@
     {
         "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
@@ -1712,6 +1724,10 @@
         "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\drawable-mdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
+        "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
+    },
+    {
         "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
@@ -1794,6 +1810,10 @@
     {
         "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
         "source": "C:\\Users\\remim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64bfe204efcf4a8c546dd87a3750edbc\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "C:\\Users\\remim\\AndroidStudioProjects\\Chess\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
